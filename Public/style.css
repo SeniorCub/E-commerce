@@ -1,0 +1,131 @@
+*{
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+}
+body{
+     position: relative;
+     background-color: rgba(128, 128, 128, 0.11);
+     overflow-x: hidden;
+}
+form input{
+     width: 700px!important;
+}
+.bord, .ccc, .suuum, .suuu{
+     border-bottom: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.btn-outline-success{
+     border: 1px solid orange;
+     color: orange;
+}
+.btn-outline-success:hover{
+     background-color: orange;
+     border: 1px solid orange;
+}
+.carts{
+     position: absolute;
+     width: 80vw;
+     height: max-content;
+     background-color: #333;
+     top: 0%;
+     left: 10%;
+     padding: 10px;
+}
+.cold{
+     gap: 20px;  
+     display: grid;
+     grid-template-columns: 2fr 1fr;
+}
+.col{
+     background-color: #707070;
+     padding: 10px;
+}
+.col3{
+     text-align: center;
+     margin-top: auto;
+     padding: 20px;
+}
+.suuum, .ccc{
+     text-align: left;
+     font-weight: 500;
+}
+.suuum,.suuu,.ccc{
+     padding: 5px 0;
+}
+.te{
+     margin-top: 10px;
+}
+img{
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+     background: transparent;
+}
+
+
+body{
+     font-family: monospace;
+}
+.list{
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 20px;
+
+}
+.list .item{
+     height: 400px;
+     background-color: #707070;
+     padding: 20px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     color: #fff;
+     box-shadow: 0 20px 20px grey;
+     letter-spacing: 1px;
+}
+.list .item img{
+     width: 100px;
+}
+.list .item .title{
+     font-weight: 600;
+}
+.list .item .price{
+     margin: 10px;
+}
+.list .item button{
+     margin: 10px 0;
+     background-color: #000;
+     color: #fff;
+     padding: 10px;
+     width: 100%;
+     cursor: pointer;
+     border-radius: 10px;
+     outline: none;
+}
+.listcard li{
+     display: grid;
+     grid-template-columns: 100px repeat(3, 1fr);
+     row-gap: 10px;
+     margin-bottom: 20px;
+}
+.listcard li div{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.listcard li img{
+     width: 50px;
+}
+.listcard button{
+     width: auto;
+     background-color: rgba(255, 255, 255, 0.693);
+     border: none;
+     border-radius: 10px;
+     padding: 3px;
+     cursor: pointer;
+}
+.listcard .count{
+     margin: 0 10px;
+}

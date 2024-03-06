@@ -4,13 +4,13 @@
      box-sizing: border-box;
 }
 body{
-     position: relative;
-     background-color: rgba(128, 128, 128, 0.11);
      overflow-x: hidden;
+     font-family: monospace;
 }
-form input{
-     width: 700px!important;
+.navbar{
+     padding: 10px 50px 5px;
 }
+
 .bord, .ccc, .suuum, .suuu{
      border-bottom: 1px solid rgba(0, 0, 0, 0.13);
 }
@@ -64,9 +64,7 @@ img{
 }
 
 
-body{
-     font-family: monospace;
-}
+     /*
 .list{
      display: grid;
      grid-template-columns: repeat(4, 1fr);
@@ -128,4 +126,4 @@ body{
 }
 .listcard .count{
      margin: 0 10px;
-}
+} */

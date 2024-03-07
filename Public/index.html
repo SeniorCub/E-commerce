@@ -5,99 +5,141 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!-- Bootstrap -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <link rel="stylesheet" href="style.css">
      <!-- Icon -->
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="style.css">
      <title>Document</title>
 </head>
 <body >
 
      <!-- NavBar -->
-     <nav class="navbar navbar-expand-lg">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-               <img src="Elecxo 1.png" alt="Elecxo Logo" width="102px" height="46px">
-            </a>
+     <nav class="navBar">
+          <a class="" href="#">
+               <img src="images/Elecxo 1.png" alt="Elecxo Logo" width="102px" height="46px">
+          </a>
 
-            <div class="" id="navbarSupportedContent">
-             
+          <a href="" class="icons">
                <i class="fa-solid fa-house"></i>
+          </a>
 
-              <form class="d-flex m-auto" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search by cartegory" aria-label="Search">
-              </form>
+          <form class="w-100" role="search">
+               <input class="form-control" type="search" placeholder="Search your items" aria-label="Search">
+          </form>
 
-              <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                         <a class="nav-link" href="#">
-                              <i class="fa-regular fa-user"></i>
-                         </a>
-                    </li>
-                    <div class="">
-                         <li class="nav-item nav-link position-relative car" type="button">
-                              <i class="bi bi-cart"></i>
-                                   <span class="position-absolute translate-middle badge rounded-pill bg-danger quantity">
-                                   0
-                                   </span>
-                         </li>
-                    </div> 
-             </ul>
-            </div>
-          </div>
+          <a class="icons" href="#">
+               <i class="fa-regular fa-user"></i>
+          </a>
+          <div class="position-relative icons car" type="button">
+               <i class="bi bi-cart"></i>
+                    <div class="position-absolute quantity">
+                    0
+                    </div>
+          </div> 
      </nav>
 
-   
-   
-<!--      
-     <section class="relaive">
-          <div class="d-flex justify-content-between p-2 bord">
-               <div class="">4942 products found</div>
-               <div class="d-flex gap-3">
-                    <i class="bi bi-ui-checks"></i>
-                    <i class="bi bi-grid-fill"></i>
+     <section class="firstSection">
+          <div class="categoryWord">Categories</div>
+
+          <div class="categories">
+               <div class="eachCategory tooltip-container">
+                    <div class="text"> Laptop </div>
+                    <div class="tooltip">
+                      <img src="images/laptop.png" alt="Tooltip Image">
+                    </div>
+               </div>
+
+               <div class="eachCategory tooltip-container">
+                    <div class="text"> Camera </div>
+                    <div class="tooltip">
+                      <img src="images/camera.png" alt="Tooltip Image">
+                    </div>
+               </div>
+
+               <div class="eachCategory tooltip-container">
+                    <div class="text"> Accessories </div>
+                    <div class="tooltip">
+                      <img src="images/acessories.png" alt="Tooltip Image">
+                    </div>
+               </div>
+
+               <div class="eachCategory tooltip-container">
+                    <div class="text"> Tv </div>
+                    <div class="tooltip">
+                      <img src="images/tv.png" alt="Tooltip Image">
+                    </div>
+               </div>
+
+               <div class="eachCategory tooltip-container">
+                    <div class="text"> Headphones </div>
+                    <div class="tooltip">
+                      <img src="images/Headphone.png" alt="Tooltip Image">
+                    </div>
+               </div>
+
+               <div class="eachCategory tooltip-container">
+                    <div class="text"> Storage </div>
+                    <div class="tooltip">
+                      <img src="images/storage.png" alt="Tooltip Image">
+                    </div>
+               </div>
+
+               <div class="eachCategory tooltip-container">
+                    <div class="text"> Home Theater </div>
+                    <div class="tooltip">
+                      <img src="images/audiosystem.png" alt="Tooltip Image">
+                    </div>
                </div>
           </div>
+     </section>
 
-          <div class="container">
-               <div class="list"></div>
-           </div>
-
-     </section>    
-
-     <section class="carts">
-          <div class="cold">
-               <div class="col col8">
-                    <div class="ccc">
-                         Cart
+     <section class="secondSection row justify-content-between">
+          <div class="leftSec h-100 col-2">
+               <div class="upo">
+                    <img src="images/newHeadset 1.png" alt="">
+                    <div class="text">JBL Tour One</div>
+                    <div class="dashhh">
+                         New
                     </div>
-                    
-                    <div class="listcard"></div>
-                    
                </div>
-
-               <div class="col col3">
-                    <div class="suuum">
-                         CART SUMMARY
+               <div class="upo upoo">
+                    <img src="images/newHeadphones.png" alt="">
+                    <div class="text">boAt Rockerz 255</div>
+                    <div class="dashhh">
+                         15% off
                     </div>
-                    <div class="suuu d-flex justify-content-between">
-                         <div class="">Subtotal: </div>
-                         <div class="">$<span class="total"></span></div>
-                    </div>
-                    <div class="suuu d-flex justify-content-between">
-                         <div class="">Delivery: </div>
-                         <div class="">$<span class="deliver"></span></div>
-                    </div>
-                    <div class="suuu d-flex justify-content-between">
-                         <div class="">Tax: </div>
-                         <div class="">$<span class="tax"></span></div>
-                    </div>
-                    <div class="btn btn-outline-success te" >CHECKOUT ($<span class="maxtotal"></span>)</div>
                </div>
           </div>
-     </section> -->
+          <div class="rightSec col-9">
+               <swiper-container class="mySwiper" space-between="30" pagination="true"  navigation="true" pagination-clickable="true">
+                    <swiper-slide>
+                         <div class="letsGet">
+                              <div class="head">LG GRAM I7</div>
+                              <div class="details">12th Gen Core i7 / Win11 / Microsoft 365</div>
+                              <div class="oction">Starting at $499</div>
+                              <button class="shopNow">SHOP NOW</button>
+                         </div>
+                         <div class="imagg">
+                              <img src="images/LG gram 17.png" alt="">
+                         </div>
+                    </swiper-slide>
+                    <swiper-slide>Slide 2</swiper-slide>
+                    <swiper-slide>Slide 3</swiper-slide>
+               </swiper-container>
+          </div>
+     </section>
+
+     <section class="thirdSection">
+          <div class="sectionHead">
+               <div class="categoryWord">Today's Deal</div>
+               <div class="categoryWord viewAll">View All</div>
+          </div>
+     </section>
+
 
      <!-- Font Awsome Link -->
      <script src="https://kit.fontawesome.com/2a49fbdbb8.js" crossorigin="anonymous"></script>
+     <!-- Swiper Js -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
      <script src="script.js"></script>
 </body>
 </html>

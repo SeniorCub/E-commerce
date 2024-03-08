@@ -213,7 +213,7 @@ main .section{
 }
 @media screen and (max-width: 768px){
      body{
-          overflow-x: hidden;
+          overflow-x: hidden!important;
      }
      .navBar{
           padding: 0 10px!important;
@@ -243,8 +243,6 @@ main .section{
           height: 90vh;
      }
      .updatess{
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          background-color: #F1F0F0;
+         overflow-x: scroll;
      }
 }

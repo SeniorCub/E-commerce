@@ -13,7 +13,10 @@
 <body>
      <!-- NavBar -->
      <nav class="navBar">
-          <a class="" href="#">
+          <div class="offCavaBtn">
+               <i class="fa-solid fa-list"></i>
+          </div>
+          <a class="navLogo" href="#">
                <img src="images/Elecxo 1.png" alt="Elecxo Logo" width="102px" height="46px">
           </a>
 
@@ -28,19 +31,22 @@
                  <span class="visually-hidden">unread messages</span>
                </span>
           </div>
-          <div id="liveToastBtn" class="btn position-relative icons">
+          <div class="btn position-relative icons">
                <i class="bi bi-bell"></i>
                <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
                </span>
-          </div>               
+          </div>
+          <a class="icons login" href="login.html">
+               <i class="fa-solid fa-right-from-bracket"></i>
+          </a>             
      </nav>
 
      <main>
           <div class="firstSide section">
                <div class="links">
-                    <div class="link">
-                         <a href="dashboard.html" class="active">
-                              <i class="bi bi-house-door"></i>
+                    <div class="active link">
+                         <a href="dashboard.html">
+                              <i class="bi bi-clipboard-data-fill"></i>
                               <span>Dashboard</span>
                          </a>
                     </div>
@@ -62,7 +68,7 @@
                               <span>Acount</span>
                          </a>
                    </div>
-                   <div class="links">
+                   <div class="link">
                          <a href="settings.html">
                               <i class="bi bi-gear"></i>
                               <span>Settings</span>
@@ -78,7 +84,77 @@
                </div>
           </div>
           <div class="secondSide section">
+               <div class="updatess">
+                    <!-- Visitors -->
+                    <div class="sidde vistors">
+                         <div class="vistorsTitle"><span class="iconsss"><i class="fa-solid fa-users"></i> </span> Vistors</div>
+                         <div class="vistorsCount">167,783</div>
+                         <div class="vistorsText">
+                              <div class="rattess">
+                                   <i class="bi bi-arrow-up"></i><span class="percentage">9.8</span>%
+                              </div>
+                              <div class="UserssPerWeek">
+                                   <span class="amountPerWeek">7433</span> This Week
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Total Sales -->
+                    <div class="sidde vistors">
+                         <div class="vistorsTitle"><span class="iconsss"><i class="fa-solid fa-up-right-from-square"></i></span>Total Sales</div>
+                         <div class="vistorsCount">$737,783.27</div>
+                         <div class="vistorsText">
+                              <div class="rattess">
+                                   <i class="bi bi-arrow-up"></i><span class="percentage">9.8</span>%
+                              </div>
+                              <div class="UserssPerWeek">
+                                   <span class="amountPerWeek">7433</span> This Week
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Total Orders -->
+                    <div class="sidde vistors">
+                         <div class="vistorsTitle"><span class="iconsss"><i class="fa-solid fa-money-bill-trend-up"></i></span>Total Orders</div>
+                         <div class="vistorsCount">783</div>
+                         <div class="vistorsText">
+                              <div class="rattess">
+                                   <i class="bi bi-arrow-up"></i><span class="percentage">9.8</span>%
+                              </div>
+                              <div class="UserssPerWeek">
+                                   <span class="amountPerWeek">7433</span> This Week
+                              </div>
+                         </div>
+                    </div>
+                    <!-- Refunded -->
+                    <div class="sidde vistors">
+                         <div class="vistorsTitle"><span class="iconsss"><i class="bi bi-cart-x-fill"></i></span>Refunded</div>
+                         <div class="vistorsCount">737,783</div>
+                         <div class="vistorsText">
+                              <div class="rattess">
+                                   <i class="bi bi-arrow-up"></i><span class="percentage">9.8</span>%
+                              </div>
+                              <div class="UserssPerWeek">
+                                   <span class="amountPerWeek">7433</span> This Week
+                              </div>
+                         </div>
+                    </div>
+               </div>
 
+               <div class="salesStatistics">
+                    <div class="salesStatisticsTitle">
+                         <div class="statistcsTitle">Sales Statistics</div>
+                         <div class="graphTitle">
+                              <div class="div">Visitors</div>
+                              <div class="div">Sales</div>
+                         </div>
+                    </div>
+                    <div class="salesStatisticsGraph">
+                         <div class="graph">
+                              <div class="graphBar">
+                                   <div class="bar"></div>
+                              </div>
+                         </div>
+                    </div>
+               </div>
           </div>
           <div class="thirdSide section">
 
@@ -94,9 +170,8 @@
      <!-- Lottiefiles Js -->
      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
      <!-- tailwind CSS -->
-     <script src="https://cdn.tailwindcss.com"></script>
+     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
      <!-- Loading JS -->
-     <script src="loading.js"></script>
-     <script src="script.js"></script>
+     <script src="dashboard.js"></script>
 </body>
 </html>

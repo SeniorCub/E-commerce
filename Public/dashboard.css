@@ -37,23 +37,214 @@ i{
      align-items: center;
      font-size: 17px;
 }
+.offCavaBtn{
+     display: none;
+}
 main{
      display: grid;
      grid-template-columns: 0.5fr 2fr 1fr;
 }
 main .section{
-     border: 1px solid #454D4A;
+     /* border: 1px solid #454D4A; */
      max-height: 91vh;
 }
 .firstSide{
      display: grid;
      grid-template-rows: 2fr 1fr;
+     height: 90vh;
+     overflow: hidden;
+     background-color: #F1F0F0;
 }
 .links{
      display: flex;
      flex-direction: column;
+     justify-content: space-around;
+}
+.link{
+     display: flex;
+     align-items: center;
+     padding: 20px;
+}
+.active{
+     background-color: #454D4A;
+     font-weight: 700;
+     border-left: 5px solid #58A0E2;
+     text-shadow: 1px 1px 1px #58A0E2;
+}
+.active a{
+     color: #fff;
+}
+.link i{
+     color: #58A0E2;
 }
 .customerSupport{
      border-top: 1px solid #454D4A;
-     
+     display: flex;
+     flex-direction: column;
+     justify-content: left;
+     gap: 20px;
+     padding: 15px;
+}
+.customerSupportName{
+     font-size: 15px;
+     font-weight: 600;
+}
+.customerSupportText{
+     font-size: 10px;
+     font-weight: 500;
+}
+.customerSupportBtn{
+     padding: 10px;
+     background-color: #589fe22e;
+     color: #0058aa;
+     border: none;
+     border-radius: 5px;
+     width: max-content;
+     font-size: 15px;
+     font-weight: 600;
+     cursor: pointer;
+}
+.customerSupportBtn i{
+     color: #0058aa;
+}
+.secondSide{
+     background-color: #fff;
+}
+.updatess{
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     background-color: #F1F0F0;
+}
+.sidde{
+     border-right: 1px solid #454D4A;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: left;
+     padding: 20px;
+}
+.updatess .sidde:last-child{
+     border-right: none;
+}
+.vistorsTitle{
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     font-size: 20px;
+     font-weight: 700;
+}
+
+.iconsss i{
+     color: #fff;
+}
+.vistorsTitle .iconsss{
+     background-color: #454D4A;
+     border-radius: 50%;
+     width: 30px;
+     height: 30px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+.vistorsCount{
+     font-size: 30px;
+     font-weight: 900;
+     color: #000;
+}
+.vistorsText{
+     display: flex;
+     flex-direction: row;
+     font-size: 10px;
+     font-weight: 600;
+     color: #454D4A;
+     gap: 10px;
+}
+.rattess{
+     color: green;
+}
+.rattess i{
+     color: green;
+}
+.salesStatistics{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     padding: 20px;
+}
+.salesStatisticsTitle{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     gap: 10px;
+     font-size: 20px;
+     font-weight: 700;
+}
+.graphTitle{
+     display: flex;
+     align-items: center;
+     gap: 10px;
+}
+.salesStatisticsGraph{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 10px;
+}
+.graph{
+     width: 100%;
+     height: 300px;
+     background-color: #F1F0F0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.graphBar{
+     width: 20px;
+     height: 100px;
+     background-color: #454D4A;
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+}
+.bar{
+     width: 100%;
+     background-color: #58A0E2;
+     height: 50%;
+}
+@media screen and (max-width: 768px){
+     body{
+          overflow-x: hidden;
+     }
+     .navBar{
+          padding: 0 10px!important;
+          justify-content: left;
+          margin-left: 0!important;
+     }
+     nav form{
+          display: none;
+     }
+     .offCavaBtn{
+          display: block;
+     }
+     .navBar{
+          padding: 10px 20px 5px;
+     }
+     main{
+          display: flex;
+          flex-direction: column;
+     }
+     main .section{
+          max-height: 100%;
+     }
+     .firstSide{
+          display: none;
+          position: absolute;
+          width: 50%;
+          height: 90vh;
+     }
+     .updatess{
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          background-color: #F1F0F0;
+     }
 }

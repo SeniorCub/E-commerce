@@ -396,7 +396,7 @@ swiper-slide img {
 }
 .oone{
      width: 300px;
-     height: 100%;
+     height: 315px;
      text-align: center;
      display: flex;
      justify-content: center;
@@ -421,8 +421,8 @@ swiper-slide img {
      font-variant: all-small-caps;
 }
 .top img{
-     width: 204.606px;
-     height: 168.499px;
+     width: 205px;
+     height: 170px;
 }
 .contiueName{
      color: #454D4A;
@@ -454,4 +454,46 @@ swiper-slide img {
      line-height: normal;
      font-variant: all-small-caps;
      text-decoration-line: strikethrough;
+}
+.twoo{
+     width: 300px;
+     height: 315px;
+     text-align: center;
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     background-color: #F3F3F3;
+     border-radius: 6px;
+     border: 0.5px solid black;
+     flex-direction: column;
+     gap: 10;
+     padding: 25px 55px;
+}
+.twoo .imma{
+     width: 190px;
+     height: 135px;
+}
+.twoo .contiueName{
+     color: #454D4A;
+     font-size: 10px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: normal;
+     font-variant: all-small-caps;
+}
+.otherPictures{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 12px;
+}
+.eachImags{
+     width: 70px;
+     height: 65px;
+     border-radius: 7px;
+     border: 0.5px solid #000;
+     background: #E8E8E8;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }

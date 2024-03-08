@@ -20,6 +20,206 @@ a{
 i{
      color: #454D4A;
 }
+
+/* Initially hide the content with the 'hidden' class */
+.hidden {
+     display: none;
+   }
+   #loading {
+     position: absolute;
+     left: 45%;
+     bottom: 45%;
+   }
+   
+   /* Loader 4 */
+   .boxes {
+     --size: 32px;
+     --duration: 800ms;
+     height: calc(var(--size) * 2);
+     width: calc(var(--size) * 3);
+     position: relative;
+     transform-style: preserve-3d;
+     transform-origin: 50% 50%;
+     margin-top: calc(var(--size) * 1.5 * -1);
+     transform: rotateX(60deg) rotateZ(45deg) rotateY(0deg) translateZ(0px);
+   }
+   
+   .boxes .box {
+     width: var(--size);
+     height: var(--size);
+     top: 0;
+     left: 0;
+     position: absolute;
+     transform-style: preserve-3d;
+   }
+   
+   .boxes .box:nth-child(1) {
+     transform: translate(100%, 0);
+     -webkit-animation: box1 var(--duration) linear infinite;
+     animation: box1 var(--duration) linear infinite;
+   }
+   
+   .boxes .box:nth-child(2) {
+     transform: translate(0, 100%);
+     -webkit-animation: box2 var(--duration) linear infinite;
+     animation: box2 var(--duration) linear infinite;
+   }
+   
+   .boxes .box:nth-child(3) {
+     transform: translate(100%, 100%);
+     -webkit-animation: box3 var(--duration) linear infinite;
+     animation: box3 var(--duration) linear infinite;
+   }
+   
+   .boxes .box:nth-child(4) {
+     transform: translate(200%, 0);
+     -webkit-animation: box4 var(--duration) linear infinite;
+     animation: box4 var(--duration) linear infinite;
+   }
+   
+   .boxes .box > div {
+     --background: #58A0E2;
+     --top: auto;
+     --right: auto;
+     --bottom: auto;
+     --left: auto;
+     --translateZ: calc(var(--size) / 2);
+     --rotateY: 0deg;
+     --rotateX: 0deg;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     background: var(--background);
+     top: var(--top);
+     right: var(--right);
+     bottom: var(--bottom);
+     left: var(--left);
+     transform: rotateY(var(--rotateY)) rotateX(var(--rotateX))
+       translateZ(var(--translateZ));
+   }
+   
+   .boxes .box > div:nth-child(1) {
+     --top: 0;
+     --left: 0;
+   }
+   
+   .boxes .box > div:nth-child(2) {
+     --background: #589fe281;
+     --right: 0;
+     --rotateY: 90deg;
+   }
+   
+   .boxes .box > div:nth-child(3) {
+     --background: #58A0E2;
+     --rotateX: -90deg;
+   }
+   
+   .boxes .box > div:nth-child(4) {
+     --background: #589fe281;
+     --top: 0;
+     --left: 0;
+     --translateZ: calc(var(--size) * 3 * -1);
+   }
+   
+   @-webkit-keyframes box1 {
+     0%,
+     50% {
+       transform: translate(100%, 0);
+     }
+   
+     100% {
+       transform: translate(200%, 0);
+     }
+   }
+   
+   @keyframes box1 {
+     0%,
+     50% {
+       transform: translate(100%, 0);
+     }
+   
+     100% {
+       transform: translate(200%, 0);
+     }
+   }
+   
+   @-webkit-keyframes box2 {
+     0% {
+       transform: translate(0, 100%);
+     }
+   
+     50% {
+       transform: translate(0, 0);
+     }
+   
+     100% {
+       transform: translate(100%, 0);
+     }
+   }
+   
+   @keyframes box2 {
+     0% {
+       transform: translate(0, 100%);
+     }
+   
+     50% {
+       transform: translate(0, 0);
+     }
+   
+     100% {
+       transform: translate(100%, 0);
+     }
+   }
+   
+   @-webkit-keyframes box3 {
+     0%,
+     50% {
+       transform: translate(100%, 100%);
+     }
+   
+     100% {
+       transform: translate(0, 100%);
+     }
+   }
+   
+   @keyframes box3 {
+     0%,
+     50% {
+       transform: translate(100%, 100%);
+     }
+   
+     100% {
+       transform: translate(0, 100%);
+     }
+   }
+   
+   @-webkit-keyframes box4 {
+     0% {
+       transform: translate(200%, 0);
+     }
+   
+     50% {
+       transform: translate(200%, 100%);
+     }
+   
+     100% {
+       transform: translate(100%, 100%);
+     }
+   }
+   
+   @keyframes box4 {
+     0% {
+       transform: translate(200%, 0);
+     }
+   
+     50% {
+       transform: translate(200%, 100%);
+     }
+   
+     100% {
+       transform: translate(100%, 100%);
+     }
+   }
 .navBar{
      padding: 10px 50px 5px;
      display: flex;
@@ -195,6 +395,7 @@ section{
      border-radius: 5px;
      border: 1px solid #000;
      background-color: #F1F0F0;
+     color: #000;
      width: max-content;
      padding: 5px 10px;
 }
@@ -497,3 +698,134 @@ swiper-slide img {
      justify-content: center;
      align-items: center;
 }
+/* Our Top Deals */
+.dealss{
+     padding-left: 0;
+}
+   .bg- {
+     width: 100vw;
+     background-color: #58A0E2;
+   }
+   .deals {
+     padding: 10px 50px;
+     display: flex;
+     justify-content: space-between;
+     place-items: center;
+   }
+   .topp {
+     font-weight: 700;
+     color: #000;
+     font-size: 20px;
+   }
+   .btt {
+     color: #000;
+     font-size: 15px;
+     font-weight: 700;
+   }
+   .card {
+     border: none;
+     background-color: #fff;
+     padding: 10px;
+     display: flex;
+     justify-content: space-between;
+   }
+   .percent {
+     padding: 5px;
+   }
+   .love {
+     border-radius: 50%;
+     padding: 5px;
+   }
+   .card-title {
+     justify-content: space-between;
+     place-items: center;
+     align-items: center;
+   }
+   .card img {
+     width: 100%;
+     height: 200px;
+     object-fit: contain;
+   }
+   .coll {
+     flex-direction: column;
+   }
+   .original {
+     color: #58A0E2;
+   }
+   .btn-primary {
+     /* border: none!important; */
+     background-color: #58A0E2;
+   }
+   .btn-primary:hover {
+     color: #58A0E2;
+     background-color: #F3F3F3;
+     border: #58A0E2 1px solid;
+   }
+   .btn-pri {
+     color: #58A0E2;
+     background-color: #F3F3F3;
+   }
+   .CartBtn {
+     height: 40px;
+     border-radius: 12px;
+     border: none;
+     background-color: #58A0E2;
+     cursor: pointer;
+     transition-duration: 0.5s;
+     overflow: hidden;
+     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.103);
+     position: relative;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #F3F3F3;
+   }
+   
+   .IconContainer {
+     position: absolute;
+     left: -50px;
+     width: 30px;
+     height: 30px;
+     background-color: transparent;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+     z-index: 2;
+     transition-duration: 0.5s;
+     color: #F3F3F3;
+   }
+   .icon {
+     border-radius: 1px;
+   }
+   
+   .text {
+     height: 100%;
+     width: fit-content;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #F3F3F3;
+     z-index: 1;
+     transition-duration: 0.5s;
+     font-size: 1.04em;
+     font-weight: 600;
+   }
+   
+   .CartBtn:hover .IconContainer {
+     transform: translateX(100px);
+     border-radius: 40px;
+     transition-duration: 0.5s;
+   }
+   
+   .CartBtn:hover .text {
+     transform: translate(10px, 0px);
+     transition-duration: 0.5s;
+   }
+   
+   .CartBtn:active {
+     transform: scale(0.95);
+     transition-duration: 0.5s;
+   }
+   

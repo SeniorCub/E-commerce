@@ -56,12 +56,12 @@ i{
 }
 
 .btn-outline-success{
-     border: 1px solid orange;
-     color: orange;
+     border: 1px solid #58A0E2;
+     color: #58A0E2;
 }
 .btn-outline-success:hover{
-     background-color: orange;
-     border: 1px solid orange;
+     background-color: #58A0E2;
+     border: 1px solid #58A0E2;
 }
 .carts{
      position: absolute;
@@ -98,8 +98,38 @@ i{
 }
 .list{
      display: grid;
-     grid-template-columns: repeat(4, 1fr);
+     grid-template-columns: repeat(3, 1fr);
      gap: 20px;
+
+}
+
+.list .item .title{
+     font-weight: 600;
+}
+.listcard li{
+     display: grid;
+     grid-template-columns: 100px repeat(3, 1fr);
+     row-gap: 10px;
+     margin-bottom: 20px;
+}
+.listcard li div{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.listcard li img{
+     width: 50px;
+}
+.listcard button{
+     width: auto;
+     background-color: rgba(255, 255, 255, 0.693);
+     border: none;
+     border-radius: 10px;
+     padding: 3px;
+     cursor: pointer;
+}
+.listcard .count{
+     margin: 0 10px;
 }
 .card {
      border: none;

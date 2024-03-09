@@ -4,7 +4,7 @@
      box-sizing: border-box;
 }
 body{
-     overflow-x: hidden;
+     overflow: hidden;
      font-family: monospace;
      background-color: #454d4a3b;
 }
@@ -30,14 +30,13 @@ i{
 .icons{
      width: 30px;
      height: 30px;
-     border-radius: 5px;
+     border-radius: 20%;
      background-color: #F1F0F0;
-     display: flex;
+     display: flex!important;
      justify-content: center;
      align-items: center;
-     font-size: 17px;
 }
-.offCavaBtn{
+.offCavaBtn, .masterCardIcon{
      display: none;
 }
 main{
@@ -211,6 +210,115 @@ main .section{
      background-color: #58A0E2;
      height: 50%;
 }
+.thirdSide{
+     display: flex;
+     flex-direction: column;
+     background-color: #acacac;
+}
+.profile{
+     display: flex;
+     gap: 20px;
+     padding: 20px;
+}
+.profilePic{
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     overflow: hidden;
+     border: 1px solid #454D4A;
+}
+.profileDetails{
+     display: flex;
+     flex-direction: column;
+}
+.profileName{
+     font-size: 20px;
+     font-weight: 700;
+}
+.profileEmail{
+     font-size: 15px;
+     font-weight: 600;
+     color: #454D4A;
+}
+.cardsss{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     padding: 20px;
+}
+.cardsss .haed{
+     font-size: 20px;
+     font-weight: 700;
+}
+.cards{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.card {
+     width: 100%!important;
+     border-radius: 15px;
+     padding: 20px;
+     background: linear-gradient(to right, #58A0E2, #81C0E7);
+     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+     display: flex;
+     height: 200px;
+     flex-direction: column;
+     justify-content: space-between;
+     position: relative!important;
+ }
+ 
+ .cardTop {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 10px;
+ }
+ .txt{
+     color: #454D4A;
+ }
+ .bankName{
+     font-size: 15px;
+     font-weight: 600;
+ }
+ .accountNumber {
+     font-size: 25px;
+     font-weight: 900;
+     margin: 0 auto;
+ }
+ 
+ .accountName {
+     font-size: 20px;
+     font-weight: 700;
+ }
+ 
+ .masterCardLookalike {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     position: absolute;
+     right: 5%;
+     bottom: 5%;
+ }
+ 
+ .circle1,
+ .circle2 {
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     position: relative;
+ }
+ 
+ .circle1 {
+     background: radial-gradient(hsla(0, 100%, 50%, 1), hsla(0, 100%, 50%, 0));
+     left: -10%;
+ }
+ 
+ .circle2 {
+     background: radial-gradient(rgba(255, 255, 0, 0.8), rgba(255, 255, 0, 0));
+ }
+ 
+
 @media screen and (max-width: 768px){
      body{
           overflow-x: hidden!important;
@@ -223,7 +331,7 @@ main .section{
      nav form{
           display: none;
      }
-     .offCavaBtn{
+     .offCavaBtn, .masterCardIcon{
           display: block;
      }
      .navBar{
@@ -236,11 +344,15 @@ main .section{
      main .section{
           max-height: 100%;
      }
-     .firstSide{
+     .firstSide, .thirdSide{
           display: none;
           position: absolute;
           width: 50%;
           height: 90vh;
+     }
+     .thirdSide{
+          right: 0;
+          width: 100vw;
      }
      .updatess{
          overflow-x: scroll;

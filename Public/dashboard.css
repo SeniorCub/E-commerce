@@ -7,7 +7,6 @@ body{
      overflow-x: hidden;
      font-family: monospace;
      background-color: #454d4a3b;
-     height: 100vh;
 }
 img{
      width: 100%;
@@ -38,14 +37,13 @@ i{
      align-items: center;
 }
 .offCavaBtn, .masterCardIcon{
-     display: none;
+     display: none!important;
 }
 main{
      display: grid;
      grid-template-columns: 0.5fr 2fr 1fr;
 }
 main .section{
-     /* overflow-y: scroll; */
      height: max-content;
      padding-bottom: 20px;
 }
@@ -249,6 +247,7 @@ main .section{
      font-size: 10px;
      font-weight: 600;
      color: #454D4A;
+     cursor: pointer;
 }
 .table th{
      font-size: 15px;
@@ -269,10 +268,8 @@ main .section{
      gap: 5px;
      align-items: center;
 }
-.statusColur{
-     width: 5px;
-     height: 5px;
-     border-radius: 50%;
+.bluu{
+     background-color: blue;
 }
 .gren{
      background-color: green;
@@ -288,7 +285,6 @@ main .section{
 }
 .optionsss{
      display: flex;
-     gap: 10px;
      flex-direction: column;
      position: absolute;
      right: 0%;
@@ -492,17 +488,20 @@ main .section{
           display: none;
      }
      .offCavaBtn, .masterCardIcon{
-          display: block;
+          display: flex!important;
      }
      .navBar{
           padding: 10px 20px 5px;
+          justify-content: space-between;
      }
      main{
+          width: 100vw;
           display: flex;
           flex-direction: column;
      }
      main .section{
           max-height: 100%;
+          overflow-x: hidden;
      }
      .firstSide, .thirdSide{
           display: none;
@@ -513,8 +512,15 @@ main .section{
      .thirdSide{
           right: 0;
           width: 100vw;
+          overflow-x: hidden;
      }
      .updatess{
          overflow-x: scroll;
+     }
+     .latestOrderss{
+          overflow-x: auto;
+     }
+     .tables{
+          overflow-x: scroll;
      }
 }

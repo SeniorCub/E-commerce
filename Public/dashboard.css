@@ -4,9 +4,10 @@
      box-sizing: border-box;
 }
 body{
-     overflow: hidden;
+     overflow-x: hidden;
      font-family: monospace;
      background-color: #454d4a3b;
+     height: 100vh;
 }
 img{
      width: 100%;
@@ -44,8 +45,9 @@ main{
      grid-template-columns: 0.5fr 2fr 1fr;
 }
 main .section{
-     /* border: 1px solid #454D4A; */
-     max-height: 91vh;
+     /* overflow-y: scroll; */
+     height: max-content;
+     padding-bottom: 20px;
 }
 .firstSide{
      display: grid;
@@ -181,7 +183,26 @@ main .section{
 .graphTitle{
      display: flex;
      align-items: center;
-     gap: 10px;
+     font-size: 15px;
+     font-weight: 400;
+     gap: 25px;
+}
+.div{
+     display: flex;
+     gap: 5px;
+     align-items: center;
+}
+.cir{
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background-color: #000;
+}
+.vis{
+     background-color: blueviolet;
+}
+.sal{
+     background-color: #58A0E2;
 }
 .salesStatisticsGraph{
      display: flex;
@@ -197,18 +218,92 @@ main .section{
      justify-content: center;
      align-items: center;
 }
-.graphBar{
+.vistorBar{
      width: 20px;
      height: 100px;
-     background-color: #454D4A;
+     background-color: blueviolet;
      display: flex;
      justify-content: center;
      align-items: flex-end;
 }
-.bar{
+.salesbar{
      width: 100%;
      background-color: #58A0E2;
      height: 50%;
+}
+.latestOrderss{
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     padding: 20px;
+     padding-bottom: 0!important;
+}
+.latestHaed{
+     font-size: 15px;
+     font-weight: 700;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.seeMore{
+     font-size: 10px;
+     font-weight: 600;
+     color: #454D4A;
+}
+.table th{
+     font-size: 15px;
+     font-weight: 700;
+     color: #454D4A;
+}
+.table td{
+     font-size: 10px;
+     font-weight: 900;
+     color: #000;
+}
+.table{
+     width: 100%;
+     border-collapse: collapse;
+}
+.statuss{
+     display: flex;
+     gap: 5px;
+     align-items: center;
+}
+.statusColur{
+     width: 5px;
+     height: 5px;
+     border-radius: 50%;
+}
+.gren{
+     background-color: green;
+}
+.redd{
+     background-color: red;
+}
+.orang{
+     background-color: orange;
+}
+.recentOrderOptions{
+     position: relative;
+}
+.optionsss{
+     display: flex;
+     gap: 10px;
+     flex-direction: column;
+     position: absolute;
+     right: 0%;
+     bottom: 0;
+     background-color: #F1F0F0;
+     padding: 10px;
+     z-index: 1;
+     border-radius: 20px;
+     display: none;
+}
+.option{
+     display: flex;
+     gap: 10px;
+     align-items: center;
+     cursor: pointer;
 }
 .thirdSide{
      display: flex;
@@ -219,6 +314,11 @@ main .section{
      display: flex;
      gap: 20px;
      padding: 20px;
+}
+.profilePic img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
 }
 .profilePic{
      width: 50px;
@@ -299,8 +399,7 @@ main .section{
      position: absolute;
      right: 5%;
      bottom: 5%;
- }
- 
+ } 
  .circle1,
  .circle2 {
      width: 50px;
@@ -317,8 +416,69 @@ main .section{
  .circle2 {
      background: radial-gradient(rgba(255, 255, 0, 0.8), rgba(255, 255, 0, 0));
  }
- 
-
+ .recentActivities{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     padding: 20px;
+ }
+.recentHaed{
+     font-size: 20px;
+     font-weight: 700;
+}
+.activities{
+     display: flex;
+     gap: 10px;
+     flex-direction: column;
+}
+.activity{
+     display: flex;
+     justify-content: space-between;
+     padding: 0 10px;
+     align-items: center;
+     background-color: #F1F0F0;
+     border-radius: 10px;
+     height: 50px;
+     gap: 15px;
+}
+.activityIcon i{
+     color: #0058aa;
+}
+.activityIcon{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     background-color: #81C0E7;
+     border-radius: 5px;
+     width: 30px;
+     height: 30px;
+}
+.activityDetail{
+     display: flex;
+     flex-direction: column;
+     width: 100%;
+}
+.activityBar{
+     background-color: #454d4a5e;
+     border-radius: 10px;
+     width: 100%;
+     height: 15px;
+}
+.barForActivity{
+     background-color: #58A0E2;
+     border-radius: 10px;
+     width: 50%;
+     height: 100%;
+}
+.activityTitle{
+     font-size: 10px;
+     font-weight: 700;
+}
+.barpercentag{
+     color: #454D4A;
+     width: 30px;
+     height: 30px;
+}
 @media screen and (max-width: 768px){
      body{
           overflow-x: hidden!important;

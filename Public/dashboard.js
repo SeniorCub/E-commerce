@@ -10,3 +10,11 @@ document.querySelector('.masterCardIcon').addEventListener('click', ()=>{
     let extended = thirdSide.style.display === "block";
     thirdSide.style.display = extended ? "none" : "block";
 })
+document.querySelectorAll('.recentOrderOptions').forEach((option)=>{
+     option.addEventListener('click', ()=>{
+     
+          let optionsss = document.querySelector('.optionsss')
+         let extended = optionsss.style.display === "block";
+         optionsss.style.display = extended ? "none" : "block";
+     })
+})

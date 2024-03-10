@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
             clickedCategoryName = element.querySelector('.text').innerText;
             console.log('Clicked category:', clickedCategoryName);
 
+            document.querySelector(".list").innerHTML=``;
             // Now you can use 'clickedCategoryName' to fetch data from an API or perform other actions.
             fetchDataFromAPI(clickedCategoryName);
         });

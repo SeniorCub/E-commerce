@@ -689,8 +689,8 @@ swiper-slide img {
      gap: 12px;
 }
 .eachImags{
-     width: 70px;
-     height: 65px;
+     width: 60px;
+     height: 50px;
      border-radius: 7px;
      border: 0.5px solid #000;
      background: #E8E8E8;
@@ -828,4 +828,75 @@ swiper-slide img {
      transform: scale(0.95);
      transition-duration: 0.5s;
    }
-   
+   .twoBigCards{
+     width: 100vw!important;
+     padding: 0!important;
+}
+.bigOne{
+     border-radius: 4px;
+     border: 0.798px solid #27282A;
+     background: linear-gradient(to bottom right, #08090B 7%, #0B0C0E 41%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #08090B 7%, #0B0C0E 41%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #08090B 7%, #0B0C0E 41%) top left / 50% 50% no-repeat, linear-gradient(to top right, #08090B 7%, #0B0C0E 41%) top right / 50% 50% no-repeat;
+     display: flex;
+     align-items: center;
+}
+.main{
+     display: flex;
+     flex-direction: column;
+     align-items: left;
+}
+.bigOne .mainName{
+     color: #F5F5F5;
+     font-size: 32px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     font-variant: all-small-caps;
+}
+.bigOne .mainstry{
+     color: #D9D9D9;
+     font-size: 15px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+     font-variant: all-small-caps;
+}
+.bigOne .mainPrices{
+     display: flex;
+     gap: 15px;
+     align-items: center;
+     color: #D9D9D9;
+     font-size: 19px;
+     font-style: normal;
+     font-weight: 500;
+     line-height: normal;
+     font-variant: all-small-caps;
+}
+.bigOne .mainPrices span{
+     color: #03C68B;
+     font-weight: 900;
+     font-variant: normal;
+}
+.bigOne .mainShop{
+     border-radius: 4px;
+     background: #03C68B;
+     padding: 4px 5px;
+     width: max-content;
+     color: #FFF;
+     text-align: center;
+     font-size: 10px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     font-variant: all-small-caps;
+}
+.bigImg{
+     float: right;
+     
+}
+.bigTwo{
+     border-radius: 4px;
+     background: #58A0E2;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}

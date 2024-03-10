@@ -14,56 +14,102 @@ let deliver = document.querySelector(".deliver");
 let tax = document.querySelector(".tax");
 let maxtotal = document.querySelector(".maxtotal");
 
-let listCards = [];
+// Declare a global variable to store the clicked category name
+var clickedCategoryName = '';
+var listCards = [];
+var fetchedData; // Store fetched data globally
+var currentCategory; // Store the current category globally
 
-function initApp() {
-     fetch('products.json')
-  .then(response => response.json())
-  .then(data => {
-    data.tv.forEach((value, key) => { // Change from data.tvs to data.tv
-      // Add a quantity property to each product
-      value.quantity = 0;
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all elements with the class 'eachCategory'
+    var categoryElements = document.querySelectorAll('.eachCategory');
 
-      let newDiv = document.createElement("div");
-      newDiv.classList.add("item");
-      const heartIconStyle = value.liked ? "fa-solid" : "fa-regular";
-      newDiv.innerHTML = `
-        <div class="card" style="width: 20rem; height: 30rem;">
-             <div class="bon card-title d-flex">
-                  <div class="btn btn-pri percent">${value.rating.rate}</div>
-                  <div class="btn btn-pri love"><i class="fa-regular fa-heart" style="color: #58A0E2;"></i></div>
-             </div>
+    // Iterate through each element and add a click event listener
+    categoryElements.forEach(function (element) {
+        element.addEventListener('click', function () {
+            // Get the inner text of the clicked category
+            clickedCategoryName = element.querySelector('.text').innerText;
+            console.log('Clicked category:', clickedCategoryName);
 
-             <img src= ${value.image} alt="product" width="100px">
-
-             <div class="card-title  d-flex">
-                  <div class="btn btn-sm btn-pri cartgo">${value.category}</div>
-                  <h5 class="original">$${value.price.toLocaleString()}</h5>
-             </div>
-             
-             <p class="card-text">${value.name}</p>
-
-             <button class="CartBtn addCart" onclick="addToCart(event, ${key})">
-                  <span class="IconContainer"> 
-                  <i  class="fa-solid fa-cart-shopping" class="cart" style="color: #ffffff;"></i>
-                  </span>
-                  <span class="text">Add to Cart</span>
-             </button>
-        </div>
-      `;
-      list.appendChild(newDiv);
+            // Now you can use 'clickedCategoryName' to fetch data from an API or perform other actions.
+            fetchDataFromAPI(clickedCategoryName);
+        });
     });
-  })
-  .catch(error => console.error('Error fetching data:', error));
+});
+
+function fetchDataFromAPI(categoryName) {
+    // Replace this URL with the actual path to your external JSON file
+    var apiUrl = 'products.json';
+
+    // Store the current category globally
+    currentCategory = categoryName;
+
+    // Fetch data from the API
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            fetchedData = data; // Store fetched data globally
+            // Check if the category exists in the JSON data
+            if (categoryName in fetchedData) {
+                var categoryData = fetchedData[categoryName];
+
+                // Create a container div for the products
+                let categoryContainer = document.createElement("div");
+                categoryContainer.classList.add("category-container");
+
+                categoryData.forEach((value, key) => {
+                    // Add a quantity property to each product
+                    value.quantity = 0;
+
+                    let newDiv = document.createElement("div");
+                    newDiv.classList.add("item");
+                    newDiv.innerHTML = `
+                        <div class="card">
+                            <div class="card-title d-flex">
+                                <div class="btn btn-pri percent">${value.rating.rate}</div>
+                                <div class="btn btn-pri love"><i class="fa-regular fa-heart" style="color: #58A0E2;"></i></div>
+                            </div>
+
+                            <img src=${value.image} alt="product" width="100px">
+
+                            <div class="card-title d-flex">
+                                <div class="btn btn-sm btn-pri cartgo">${value.category}</div>
+                                <h5 class="original">$${value.price.toLocaleString()}</h5>
+                            </div>
+
+                            <p class="card-text">${value.name}</p>
+
+                            <button class="CartBtn addCart" onclick="addToCart(event, ${key})">
+                                <span class="IconContainer"> 
+                                    <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
+                                </span>
+                                <span class="text">Add to Cart</span>
+                            </button>
+                        </div>
+                    `;
+                    categoryContainer.appendChild(newDiv);
+                });
+
+                // Append the container with products to the main list
+                list.appendChild(categoryContainer);
+            } else {
+                console.error('Category not found:', categoryName);
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
 }
 
 function addToCart(event, key) {
     event.preventDefault();
     if (listCards[key] == null) {
-        listCards[key] = { ...products[key], quantity: 1 };
+        listCards[key] = { ...fetchedData[currentCategory][key], quantity: 1 };
+    } else {
+        listCards[key].quantity++;
     }
-    // Increment the quantity when adding to cart
-    products[key].quantity++;
+    // Increment the quantity in the original data
+    fetchedData[currentCategory][key].quantity++;
     reloadCard();
 }
 
@@ -78,6 +124,10 @@ function reloadCard() {
         count = count + value.quantity;
 
         if (value != null) {
+            // Create a container div for each cart item
+            let cartItemContainer = document.createElement("div");
+            cartItemContainer.classList.add("cart-item-container");
+
             let newDiv = document.createElement("li");
             newDiv.innerHTML = `
                 <div><img src="${value.image}" alt="" width=""></div>
@@ -89,7 +139,10 @@ function reloadCard() {
                     <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
                 </div>
             `;
-            listCard.appendChild(newDiv);
+            cartItemContainer.appendChild(newDiv);
+
+            // Append the container with the cart item to the main listCard
+            listCard.appendChild(cartItemContainer);
         }
     });
 
@@ -111,26 +164,7 @@ function changeQuantity(key, quantity) {
     } else {
         listCards[key].quantity = quantity;
     }
-    reloadCard();ggs
+    // Update the quantity in the original data
+    fetchedData[currentCategory][key].quantity = quantity;
+    reloadCard();
 }
-
-let toogler = document.querySelectorAll(".love");
-toogler.forEach((button, key) => {
-    button.addEventListener("click", (event) => like(event, key));
-});
-
-function like(event, key) {
-    const likeButton = event.currentTarget;
-    const product = products[key];
-
-    const heartIcon = likeButton.querySelector(".fa-heart");
-
-    // Toggle the liked property for the specific product
-    product.liked = !product.liked;
-
-    // Toggle the heart icon based on the liked property
-    heartIcon.classList.toggle("fa-solid", product.liked);
-    heartIcon.classList.toggle("fa-regular", !product.liked);
-}
-
-initApp();

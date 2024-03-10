@@ -1,28 +1,31 @@
 {
-    "tv": [
-          {
-               "id":1,
-               "name":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-               "price":109.95,
-               "category":"men clothing",
-               "image":"images/tv.png",
-               "rating":{
-                    "rate":3.9,
-                    "count":120
-               }
-          }
+     "Tv": [
+         {
+             "key": 1,
+             "id": 1,
+             "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "men clothing",
+             "image": "images/tv.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         }
      ],
-     "Laptops": [
-          {
-               "id":1,
-               "name":"Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-               "price":109.95,
-               "category":"men clothing",
-               "image":"images/laptop.png",
-               "rating":{
-                    "rate":3.9,
-                    "count":120
-               }
-          }
+     "Laptop": [
+         {
+             "key": 2,
+             "id": 1,
+             "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "men clothing",
+             "image": "images/laptop.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         }
      ]
-}
+ }
+ 

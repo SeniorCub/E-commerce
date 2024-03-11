@@ -1,31 +1,241 @@
 {
      "Tv": [
          {
-             "key": 1,
-             "id": 1,
-             "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+               "productId": 1,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "men clothing",
+               "image": "images/tv.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+         },
+         {
+               "productId": 2,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "men clothing",
+               "image": "images/tv3.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+         },
+         {
+               "productId": 3,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "men clothing",
+               "image": "images/tv4.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+         },
+         {
+               "productId": 4,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "women clothing",
+               "image": "images/tvremote1.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+        },
+         {
+               "productId": 5,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "women clothing",
+               "image": "images/tv5.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+        },
+         {
+               "productId": 6,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "women clothing",
+               "image": "images/tv6.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+        },
+         {
+               "productId": 7,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "women clothing",
+               "image": "images/tv7.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+        },
+         {
+               "productId": 8,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "women clothing",
+               "image": "images/tv2.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+        },
+         {
+               "productId": 9,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "women clothing",
+               "image": "images/tvremote1.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+        },
+         {
+               "productId": 10,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
+               "price": 109.95,
+               "category": "women clothing",
+               "image": "images/tv3.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+        }
+     ],
+     "Laptop": [
+         {
+               "productId": 1,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
              "price": 109.95,
-             "category": "men clothing",
-             "image": "images/tv.png",
+             "category": "Laptop",
+             "image": "images/laptop.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 2,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop2.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 3,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop3.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 4,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop4.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 5,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop5.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 6,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop2.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 7,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop4.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 8,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop5.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 9,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop.png",
+             "rating": {
+                 "rate": 3.9,
+                 "count": 120
+             }
+         },
+         {
+               "productId": 10,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+             "price": 109.95,
+             "category": "Laptop",
+             "image": "images/laptop3.png",
              "rating": {
                  "rate": 3.9,
                  "count": 120
              }
          }
      ],
-     "Laptop": [
-         {
-             "key": 2,
-             "id": 1,
-             "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
-             "price": 109.95,
-             "category": "men clothing",
-             "image": "images/laptop.png",
-             "rating": {
-                 "rate": 3.9,
-                 "count": 120
-             }
-         }
+     "Camera": [
+           {
+                  "productId": 1,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "brand": "Fjallraen",
+                "image": "images/camera1.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          }
      ]
  }
  

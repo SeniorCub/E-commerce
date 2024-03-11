@@ -25,16 +25,17 @@ document.addEventListener("DOMContentLoaded", function () {
                
                <p class="card-text">${element.title}</p>
 
-               <button class="CartBtn">
+               <a class="CartBtn"href="login.html">
                     <span class="IconContainer"> 
                     <i  class="fa-solid fa-cart-shopping" class="cart" style="color: #ffffff;"></i>
                     </span>
                     <span class="text">Add to Cart</span>
-               </button>
+               </a>
           </div>
      `;
       })
     );
+
 
 
   const images = document.querySelectorAll("img[data-src]");
@@ -72,6 +73,6 @@ document.addEventListener("DOMContentLoaded", function () {
     await showContent();
   }
 
+
   window.addEventListener("load", initializeWebsite);
 });
-

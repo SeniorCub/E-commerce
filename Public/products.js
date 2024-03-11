@@ -16,11 +16,23 @@ let maxtotal = document.querySelector(".maxtotal");
 
 // Declare a global variable to store the clicked category name
 var clickedCategoryName = '';
-var listCards = [];
 var fetchedData; // Store fetched data globally
 var currentCategory; // Store the current category globally
 
 document.addEventListener('DOMContentLoaded', function () {
+    // Get the container that holds the product list
+    const productListContainer = document.querySelector('.list');
+
+    // Delegate the click event to the product list container
+    productListContainer.addEventListener('click', function (event) {
+        const addButton = event.target.closest('.addCart');
+        if (addButton) {
+            // Find the index of the product in the list
+            const key = addButton.dataset.key;
+            addToCart(event, key);
+        }
+    });
+
     // Get all elements with the class 'eachCategory'
     var categoryElements = document.querySelectorAll('.eachCategory');
 
@@ -31,11 +43,14 @@ document.addEventListener('DOMContentLoaded', function () {
             clickedCategoryName = element.querySelector('.text').innerText;
             console.log('Clicked category:', clickedCategoryName);
 
-            document.querySelector(".list").innerHTML=``;
+            document.querySelector(".list").innerHTML = ``;
             // Now you can use 'clickedCategoryName' to fetch data from an API or perform other actions.
             fetchDataFromAPI(clickedCategoryName);
         });
     });
+
+    // Fetch initial data for a default category (if needed)
+    fetchDataFromAPI('Tv');
 });
 
 function fetchDataFromAPI(categoryName) {
@@ -80,7 +95,7 @@ function fetchDataFromAPI(categoryName) {
 
                             <p class="card-text">${value.name}</p>
 
-                            <button class="CartBtn addCart" onclick="addToCart(event, ${key})">
+                            <button class="CartBtn addCart" data-key="${key}">
                                 <span class="IconContainer"> 
                                     <i class="fa-solid fa-cart-shopping" style="color: #ffffff;"></i>
                                 </span>
@@ -102,62 +117,77 @@ function fetchDataFromAPI(categoryName) {
         });
 }
 
+// Change listCards to an array
+var listCards = [];
+
 function addToCart(event, key) {
-    event.preventDefault();
-    if (listCards[key] == null) {
-        listCards[key] = { ...fetchedData[currentCategory][key], quantity: 1 };
-    } else {
-        listCards[key].quantity++;
-    }
-    // Increment the quantity in the original data
-    fetchedData[currentCategory][key].quantity++;
-    reloadCard();
-}
-
-function reloadCard() {
-    listCard.innerHTML = ``;
-    let count = 0;
-    let totalPrice = 0;
-
-    // Calculate total based on listCards array
-    listCards.forEach((value, key) => {
-        totalPrice = totalPrice + value.price * value.quantity;
-        count = count + value.quantity;
-
-        if (value != null) {
-            // Create a container div for each cart item
-            let cartItemContainer = document.createElement("div");
-            cartItemContainer.classList.add("cart-item-container");
-
-            let newDiv = document.createElement("li");
-            newDiv.innerHTML = `
-                <div><img src="${value.image}" alt="" width=""></div>
-                <div>${value.name}</div>
-                <div>$${(value.price * value.quantity).toLocaleString()}</div>
-                <div>
-                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
-                    <div class="count">${value.quantity}</div>
-                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
-                </div>
-            `;
-            cartItemContainer.appendChild(newDiv);
-
-            // Append the container with the cart item to the main listCard
-            listCard.appendChild(cartItemContainer);
-        }
-    });
-
-    // Calculate tax, delivery, and max total
-    let del = totalPrice * 0.02;
-    let ttax = totalPrice * 0.011;
-    let max = totalPrice + del + ttax;
-
-    total.innerText = totalPrice.toLocaleString();
-    quantity.innerText = count;
-    deliver.innerText = del.toLocaleString();
-    tax.innerText = ttax.toLocaleString();
-    maxtotal.innerText = max.toLocaleString();
-}
+     event.preventDefault();
+     const productToAdd = JSON.parse(JSON.stringify(fetchedData[currentCategory][key]));
+ 
+     const uniqueIdentifier = `${productToAdd.productId}_${currentCategory}`;
+     const existingProductIndex = listCards.findIndex(product => product.uniqueIdentifier === uniqueIdentifier);
+ 
+     if (existingProductIndex === -1) {
+         listCards.push({ ...productToAdd, quantity: 1, uniqueIdentifier });
+     } else {
+         listCards[existingProductIndex].quantity++;
+     }
+ 
+     fetchedData[currentCategory][key].quantity++;
+ 
+     reloadCard();
+ }
+ 
+ 
+ function reloadCard() {
+     listCard.innerHTML = ``;
+     let count = 0;
+     let totalPrice = 0;
+ 
+     listCards.forEach((value, index) => {
+         totalPrice += value.price * value.quantity;
+         count += value.quantity;
+ 
+         const [productId, category] = value.uniqueIdentifier.split('_');
+         const product = fetchedData[category].find(item => item.productId === parseInt(productId));
+ 
+         if (product) {
+             // Create a container div for each cart item
+             let cartItemContainer = document.createElement("div");
+             cartItemContainer.classList.add("cart-item-container");
+ 
+             let newDiv = document.createElement("li");
+             newDiv.innerHTML = `
+                 <div><img src="${product.image}" alt="" width=""></div>
+                 <div>${product.name}</div>
+                 <div>$${(product.price * value.quantity).toLocaleString()}</div>
+                 <div>
+                     <button onclick="changeQuantity(${index}, ${value.quantity - 1})">-</button>
+                     <div class="count">${value.quantity}</div>
+                     <button onclick="changeQuantity(${index}, ${value.quantity + 1})">+</button>
+                 </div>
+             `;
+             cartItemContainer.appendChild(newDiv);
+ 
+             // Append the container with the cart item to the main listCard
+             listCard.appendChild(cartItemContainer);
+         } else {
+             console.error('Product not found:', value);
+         }
+     });
+ 
+     // Calculate tax, delivery, and max total
+     let del = totalPrice * 0.02;
+     let ttax = totalPrice * 0.011;
+     let max = totalPrice + del + ttax;
+ 
+     total.innerText = totalPrice.toLocaleString();
+     quantity.innerText = count;
+     deliver.innerText = del.toLocaleString();
+     tax.innerText = ttax.toLocaleString();
+     maxtotal.innerText = max.toLocaleString();
+ }
+ 
 
 function changeQuantity(key, quantity) {
     if (quantity == 0) {

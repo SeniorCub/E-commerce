@@ -54,6 +54,7 @@ i{
      border-radius: 5px;
 }
 .firstSection{
+     padding: 0 50px;
      display: flex;
      flex-direction: column;
      gap: 25px;
@@ -91,6 +92,7 @@ i{
      color: #000;
      width: max-content;
      padding: 5px 10px;
+     cursor: pointer;
 }
 .tooltip-container {
      position: relative;
@@ -127,13 +129,14 @@ i{
 .carts{
      position: absolute;
      width: 80vw;
-     height: max-content;
+     overflow-y: hidden;
      background-color: #333;
      top: 0%;
      left: 10%;
      padding: 10px;
 }
 .cold{
+     position: relative;
      gap: 20px;  
      display: grid;
      grid-template-columns: 2fr 1fr;
@@ -145,7 +148,11 @@ i{
 .col3{
      text-align: center;
      margin-top: auto;
+     width: 30%;
      padding: 20px;
+     bottom: 0%;
+     right: 2%;
+     position: absolute;
 }
 .suuum, .ccc{
      text-align: left;
@@ -163,7 +170,22 @@ i{
      gap: 20px;
 
 }
-
+.listcard{
+     height: 60vh;
+     overflow-y: scroll;
+}
+.listcard::-webkit-scrollbar-thumb{
+     background-color: #58A0E2;
+     border-radius: 10px;
+}
+.listcard::-webkit-scrollbar-track-piece{
+     background-color: #fff;
+     border-radius: 10px;
+}
+.listcard::-webkit-scrollbar{
+     background-color: #58A0E2;
+     border-radius: 10px;
+}
 .list .item .title{
      font-weight: 600;
 }

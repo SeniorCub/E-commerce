@@ -255,7 +255,7 @@ i{
      font-size: 25px;
      color: #454D4A;
 }
-.hero button {
+.hero a {
      position: relative;
      display: inline-block;
      cursor: pointer;
@@ -269,12 +269,12 @@ i{
      font-family: inherit;
 }
 
-.hero button.learn-more {
+.hero a.learn-more {
      width: 12rem;
      height: auto;
 }
 
-.hero button.learn-more .circle {
+.hero a.learn-more .circle {
      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
      position: relative;
      display: block;
@@ -285,7 +285,7 @@ i{
      border-radius: 1.625rem;
 }
 
-.hero button.learn-more .circle .icon {
+.hero a.learn-more .circle .icon {
      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
      position: absolute;
      top: 0;
@@ -294,7 +294,7 @@ i{
      background: #fff;
 }
 
-.hero button.learn-more .circle .icon.arrow {
+.hero a.learn-more .circle .icon.arrow {
      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
      left: 0.625rem;
      width: 1.125rem;
@@ -302,7 +302,7 @@ i{
      background: none;
 }
 
-.hero button.learn-more .circle .icon.arrow::before {
+.hero a.learn-more .circle .icon.arrow::before {
      position: absolute;
      content: "";
      top: -0.29rem;
@@ -314,7 +314,7 @@ i{
      transform: rotate(45deg);
 }
 
-.hero button.learn-more .button-text {
+.hero a.learn-more .button-text {
      transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
      position: absolute;
      top: 0;
@@ -330,15 +330,15 @@ i{
      text-transform: uppercase;
 }
 
-.hero button:hover .circle {
+.hero a:hover .circle {
      width: 100%;
 }
 
-.hero button:hover .circle .icon.arrow {
+.hero a:hover .circle .icon.arrow {
      background: #fff;
      transform: translate(1rem, 0);
 }
-.hero button:hover .button-text {
+.hero a:hover .button-text {
 color: #fff;
 }
 .hero lottie-player{

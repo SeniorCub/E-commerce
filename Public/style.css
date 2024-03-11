@@ -418,6 +418,9 @@ section{
      height: 150px;
      border-radius: 10px;
 }
+.upo img{
+     object-fit: contain!important;
+}
 .upo .text{
      position: absolute;
      bottom: 0;
@@ -686,6 +689,9 @@ swiper-slide img {
      display: flex;
      justify-content: center;
      align-items: center;
+}
+.eachImags img{
+     object-fit: contain!important;
 }
 /* Our Top Deals */
 .dealss{

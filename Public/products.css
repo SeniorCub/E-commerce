@@ -320,3 +320,20 @@ i{
      transition-duration: 0.5s;
    }
    
+@media screen and (max-width: 768px){
+     .firstSection{
+          padding: 0;
+          overflow-x: hidden;
+     }
+     .categories{
+          width: 100vw;
+          overflow-x: scroll;
+          margin: 0 auto;
+          justify-content: center;
+          align-items: center;
+          gap: 10px;
+     }
+     .category-container{
+          grid-template-columns: repeat(2, 1fr)!important;
+     }
+}

@@ -4,7 +4,7 @@
                "productId": 1,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "men clothing",
+               "category": "Tv",
                "image": "images/tv.png",
                "rating": {
                     "rate": 3.9,
@@ -15,7 +15,7 @@
                "productId": 2,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "men clothing",
+               "category": "Tv",
                "image": "images/tv3.png",
                "rating": {
                     "rate": 3.9,
@@ -26,7 +26,7 @@
                "productId": 3,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "men clothing",
+               "category": "Tv",
                "image": "images/tv4.png",
                "rating": {
                     "rate": 3.9,
@@ -37,7 +37,7 @@
                "productId": 4,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "women clothing",
+               "category": "Tv",
                "image": "images/tvremote1.png",
                "rating": {
                     "rate": 3.9,
@@ -48,7 +48,7 @@
                "productId": 5,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "women clothing",
+               "category": "Tv",
                "image": "images/tv5.png",
                "rating": {
                     "rate": 3.9,
@@ -59,7 +59,7 @@
                "productId": 6,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "women clothing",
+               "category": "Tv",
                "image": "images/tv6.png",
                "rating": {
                     "rate": 3.9,
@@ -70,7 +70,7 @@
                "productId": 7,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "women clothing",
+               "category": "Tv",
                "image": "images/tv7.png",
                "rating": {
                     "rate": 3.9,
@@ -81,7 +81,7 @@
                "productId": 8,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "women clothing",
+               "category": "Tv",
                "image": "images/tv2.png",
                "rating": {
                     "rate": 3.9,
@@ -92,7 +92,7 @@
                "productId": 9,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "women clothing",
+               "category": "Tv",
                "image": "images/tvremote1.png",
                "rating": {
                     "rate": 3.9,
@@ -103,7 +103,7 @@
                "productId": 10,
                "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Tvs",
                "price": 109.95,
-               "category": "women clothing",
+               "category": "Tv",
                "image": "images/tv3.png",
                "rating": {
                     "rate": 3.9,
@@ -224,18 +224,564 @@
          }
      ],
      "Camera": [
-           {
+          {
                   "productId": 1,
                   "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
                 "price": 109.95,
                 "category": "camera",
-                "brand": "Fjallraen",
+                "image": "images/camera.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 2,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
                 "image": "images/camera1.png",
                "rating": {
                     "rate": 3.9,
                     "count": 120
                }
+          },
+          {
+                  "productId": 3,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "image": "images/camera2.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 4,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "image": "images/camera3.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 5,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "image": "images/camera4.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 6,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "image": "images/camera5.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 7,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "image": "images/camera3.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 8,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "image": "images/camera2.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 9,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "image": "images/camera1.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 10,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Cameras",
+                "price": 109.95,
+                "category": "camera",
+                "image": "images/camera3.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          }
+     ],
+     "Accessories": [
+          {
+                  "productId": 1,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 2,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories1.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 3,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories2.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 4,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories3.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 5,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories4.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 6,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories2.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 7,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories4.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 8,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 9,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories1.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 10,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Accessories",
+                "price": 109.95,
+                "category": "accessories",
+                "image": "images/acessories3.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          }
+     ],
+     "Headphones": [
+          {
+                  "productId": 1,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+                "price": 109.95,
+                "category": "headphones",
+                "image": "images/Headphone.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 2,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+                "price": 109.95,
+                "category": "headphones",
+                "image": "images/headset2.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 3,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+                "price": 109.95,
+                "category": "headphones",
+                "image": "images/headset3.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 4,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+                "price": 109.95,
+                "category": "headphones",
+                "image": "images/newHeadphones.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 5,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+                "price": 109.95,
+                "category": "headphones",
+                "image": "images/newHeadset.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+                  "productId": 6,
+                  "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+                "price": 109.95,
+                "category": "headphones",
+                "image": "images/newHeadphones.png",
+               "rating": {
+                    "rate": 3.9,
+                    "count": 120
+               }
+          },
+          {
+               "productId": 7,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+             "price": 109.95,
+             "category": "headphones",
+             "image": "images/Headphone.png",
+            "rating": {
+                 "rate": 3.9,
+                 "count": 120
+            }
+       },
+       {
+               "productId": 8,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+             "price": 109.95,
+             "category": "headphones",
+             "image": "images/headset2.png",
+            "rating": {
+                 "rate": 3.9,
+                 "count": 120
+            }
+       },
+       {
+               "productId": 9,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+             "price": 109.95,
+             "category": "headphones",
+             "image": "images/headset3.png",
+            "rating": {
+                 "rate": 3.9,
+                 "count": 120
+            }
+       },
+       {
+               "productId": 10,
+               "name": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Headphones",
+             "price": 109.95,
+             "category": "headphones",
+             "image": "images/newHeadset.png",
+            "rating": {
+                 "rate": 3.9,
+                 "count": 120
+            }
+       }
+     ],
+     "Storage": [
+          {
+               "productId": 1,
+               "name": "Storage Product 1",
+               "price": 99.99,
+               "category": "storage",
+               "image": "images/storage.png",
+               "rating": {
+                    "rate": 4.5,
+                    "count": 50
+               }
+          },
+          {
+               "productId": 2,
+               "name": "Storage Product 2",
+               "price": 79.99,
+               "category": "storage",
+               "image": "images/storage2.png",
+               "rating": {
+                    "rate": 4.2,
+                    "count": 80
+               }
+          },
+          {
+               "productId": 3,
+               "name": "Storage Product 3",
+               "price": 129.99,
+               "category": "storage",
+               "image": "images/storage3.png",
+               "rating": {
+                    "rate": 4.8,
+                    "count": 30
+               }
+          },
+          {
+               "productId": 4,
+               "name": "Storage Product 4",
+               "price": 149.99,
+               "category": "storage",
+               "image": "images/storage4.png",
+               "rating": {
+                    "rate": 4.6,
+                    "count": 60
+               }
+          },
+          {
+               "productId": 5,
+               "name": "Storage Product 5",
+               "price": 109.99,
+               "category": "storage",
+               "image": "images/storage2.png",
+               "rating": {
+                    "rate": 4.4,
+                    "count": 70
+               }
+          },
+          {
+               "productId": 6,
+               "name": "Storage Product 6",
+               "price": 89.99,
+               "category": "storage",
+               "image": "images/storage4.png",
+               "rating": {
+                    "rate": 4.3,
+                    "count": 90
+               }
+          },
+          {
+               "productId": 7,
+               "name": "Storage Product 7",
+               "price": 119.99,
+               "category": "storage",
+               "image": "images/storage.png",
+               "rating": {
+                    "rate": 4.7,
+                    "count": 40
+               }
+          },
+          {
+               "productId": 8,
+               "name": "Storage Product 8",
+               "price": 99.99,
+               "category": "storage",
+               "image": "images/storage3.png",
+               "rating": {
+                    "rate": 4.5,
+                    "count": 50
+               }
+          },
+          {
+               "productId": 9,
+               "name": "Storage Product 9",
+               "price": 79.99,
+               "category": "storage",
+               "image": "images/storage3.png",
+               "rating": {
+                    "rate": 4.2,
+                    "count": 80
+               }
+          },
+          {
+               "productId": 20,
+               "name": "Storage Product 10",
+               "price": 129.99,
+               "category": "storage",
+               "image": "images/storage2.png",
+               "rating": {
+                    "rate": 4.8,
+                    "count": 30
+               }
+          }
+     ],
+     "Home Theater": [
+          {
+               "productId": 1,
+               "name": "Home Theater Product 1",
+               "price": 99.99,
+               "category": "home theater",
+               "image": "images/audiosystem.png",
+               "rating": {
+                    "rate": 4.5,
+                    "count": 50
+               }
+          },
+          {
+               "productId": 2,
+               "name": "Home Theater Product 2",
+               "price": 79.99,
+               "category": "home theater",
+               "image": "images/audiosystem2.png",
+               "rating": {
+                    "rate": 4.2,
+                    "count": 80
+               }
+          },
+          {
+               "productId": 3,
+               "name": "Home Theater Product 3",
+               "price": 129.99,
+               "category": "home theater",
+               "image": "images/audiosystem3.png",
+               "rating": {
+                    "rate": 4.8,
+                    "count": 30
+               }
+          },
+          {
+               "productId": 4,
+               "name": "Home Theater Product 4",
+               "price": 149.99,
+               "category": "home theater",
+               "image": "images/audiosystem4.png",
+               "rating": {
+                    "rate": 4.6,
+                    "count": 60
+               }
+          },
+          {
+               "productId": 5,
+               "name": "Home Theater Product 5",
+               "price": 109.99,
+               "category": "home theater",
+               "image": "images/audiosystem5.png",
+               "rating": {
+                    "rate": 4.4,
+                    "count": 70
+               }
+          },
+          {
+               "productId": 6,
+               "name": "Home Theater Product 6",
+               "price": 89.99,
+               "category": "home theater",
+               "image": "images/audiosystem4.png",
+               "rating": {
+                    "rate": 4.3,
+                    "count": 90
+               }
+          },
+          {
+               "productId": 7,
+               "name": "Home Theater Product 7",
+               "price": 119.99,
+               "category": "home theater",
+               "image": "images/audiosystem.png",
+               "rating": {
+                    "rate": 4.5,
+                    "count": 90
+               }
+          },
+          {
+               "productId": 8,
+               "name": "Home Theater Product 8",
+               "price": 99.99,
+               "category": "home theater",
+               "image": "images/audiosystem2.png",
+               "rating": {
+                    "rate": 4.5,
+                    "count": 50
+               }
+          },
+          {
+               "productId": 9,
+               "name": "Home Theater Product 9",
+               "price": 79.99,
+               "category": "home theater",
+               "image": "images/audiosystem3.png",
+               "rating": {
+                    "rate": 4.2,
+                    "count": 80
+               }
+          },
+          {
+               "productId": 20,
+               "name": "Home Theater Product 10",
+               "price": 129.99,
+               "category": "home theater",
+               "image": "images/audiosystem5.png",
+               "rating": {
+                    "rate": 4.8,
+                    "count": 30
+               }
           }
      ]
- }
+}
  

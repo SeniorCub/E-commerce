@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 *{
-     padding: 0;
      margin: 0;
+     padding: 0;
      box-sizing: border-box;
+     font-family: "Poppins", sans-serif;
 }
 body{
      overflow-x: hidden;
@@ -236,20 +238,7 @@ i{
      justify-content: center;
      align-items: center;
      font-size: 17px;
-}
-.quantity{
-     right: -30%;
-     top: -10%;
-     background-color: #58A0E2;
-     color: #fff;
-     width: 15px;
-     height: 15px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     font-weight: bold;
-     font-size: 10px;
-     border-radius: 5px;
+     cursor: pointer;
 }
 .hero{
      padding-top: 0;
@@ -838,8 +827,10 @@ swiper-slide img {
      background: linear-gradient(to bottom right, #08090B 7%, #0B0C0E 41%) bottom right / 50% 50% no-repeat, linear-gradient(to bottom left, #08090B 7%, #0B0C0E 41%) bottom left / 50% 50% no-repeat, linear-gradient(to top left, #08090B 7%, #0B0C0E 41%) top left / 50% 50% no-repeat, linear-gradient(to top right, #08090B 7%, #0B0C0E 41%) top right / 50% 50% no-repeat;
      display: flex;
      align-items: center;
+     justify-content: space-between;
 }
 .main{
+     padding-left: 10px;
      display: flex;
      flex-direction: column;
      align-items: left;
@@ -871,6 +862,10 @@ swiper-slide img {
      line-height: normal;
      font-variant: all-small-caps;
 }
+.twoBigCards .row>*{
+     /* padding-left: 0!important; */
+     padding-right: 0!important;
+}
 .bigOne .mainPrices span{
      color: #03C68B;
      font-weight: 900;
@@ -889,14 +884,125 @@ swiper-slide img {
      line-height: normal;
      font-variant: all-small-caps;
 }
-.bigImg{
-     float: right;
-     
-}
 .bigTwo{
      border-radius: 4px;
      background: #58A0E2;
      display: flex;
      justify-content: center;
      align-items: center;
+     position: relative;
+}
+.mini{
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     align-items: left;
+     margin-right: auto;
+     margin-left: 50px;
+}
+.miniName{
+     color: #FEFFFF;
+     font-size: 48px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: normal;
+     font-variant: all-small-caps;
+}
+.miniName span{
+     font-weight: 600;
+}
+.miniStory{
+     color: #FFF;
+     font-size: 15px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: normal;
+     font-variant: all-small-caps;
+     display: flex;
+     flex-direction: column;
+}
+.miniStory .bold{
+     font-weight: 700;
+}
+.miniImg{
+     width: 310px;
+     height: 380px;
+     transform: rotate(0.151deg);
+     position: absolute;
+     right: 0;
+     bottom: 0;
+}
+footer{
+     margin-top: 10px;
+     padding: 50px 0 20px;
+     background: #F1F0F0;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.otherPages{
+     display: flex;
+     flex-direction: row;
+     gap: 100px;
+}
+.otherPage{
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+}
+.otherPageHead{
+     color: #393B3A;
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+}
+.otherPageLinks{
+     display: flex;
+     flex-direction: column;
+     gap: 3px;
+}
+.otherPageLinks a{
+     color: #393B3A;
+     font-size: 12px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+}
+hr{
+     width: 100%;
+     border: 0.5px solid #393B3A;
+}
+.footer{
+     display: flex;
+     /* flex-direction: row; */
+     justify-content: space-between;
+     width: 100%;
+     padding: 0px 30px;
+}
+.sideLeft, .sideRight{
+     width: 20%;
+}
+.mailUs{
+     color: #000;
+     font-size: 12px;
+     font-style: normal;
+     font-weight: 700;
+     line-height: normal;
+}
+.email{
+     color: #000;
+     font-size: 10px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: normal;
+}
+@media screen and (max-width: 768px){
+     .col-12{
+          width: 100%;
+     }
+     .bigTwo{
+          height: 305px;
+     }
 }

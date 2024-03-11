@@ -164,11 +164,10 @@ i{
 .te{
      margin-top: 10px;
 }
-.list{
+.category-container{
      display: grid;
-     grid-template-columns: repeat(3, 1fr);
+     grid-template-columns: repeat(4, 1fr)!important;
      gap: 20px;
-
 }
 .listcard{
      height: 60vh;

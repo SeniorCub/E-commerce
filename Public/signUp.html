@@ -32,37 +32,26 @@
           </div>
           <div class="col-md-6 right">
                <div class="signup-form">
-                    <form action="" method="post">
+                    <form action="http://localhost:2020/api/v1/auth/signUp" method="post">
                          <div class="form-group">
                               <div class="eachInput">
-                                   <div class="error MsgEmail">Incorrect</div>
-                                   <input type="text" name="email" id="email" class="form-control" placeholder="Email">
+                                   <div class="error MsgName">Incorrect</div>
+                                   <input type="name" name="name" id="name" class="form-control" placeholder="Full name">
                               </div>
                               <div class="eachInput">
-                                   <div class="error MsgUsername">Incorrect</div>
-                                   <input type="text" name="createUsername" id="createUsername" class="form-control" placeholder="Username">
+                                   <div class="error MsgEmail">Incorrect</div>
+                                   <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                               </div>
+                              <!-- <div class="eachInput">
+                                   <div class="error MsgUsername">Incorrect</div>
+                                   <input type="text" name="userName" id="createUsername" class="form-control" placeholder="Username">
+                              </div> -->
                               <div class="eachInput">
                                    <div class="error  MsgPassword">Incorrect</div>
-                                   <input type="password" name="createPassword" id="createPassword" class="form-control" placeholder="Create Password">
-                              </div>
-                              <div class="eachInput">
-                                   <input type="password" name="confirmPassword" id="confirmPassword" class="form-control" placeholder="Confirm Password">
+                                   <input type="password" name="password" id="createPassword" class="form-control" placeholder="Create Password">
                               </div>
 
                               <button type="submit" class="signup">SignUp</button>
-
-                              <div class="options">
-                                   <a class="iconss">
-                                        <i class="bi bi-facebook"></i>
-                                   </a>
-                                   <a class="iconss">
-                                        <i class="bi bi-twitter"></i>
-                                   </a>
-                                   <a class="iconss">
-                                        <i class="bi bi-google"></i>
-                                   </a>
-                              </div>
                          </div>
 
                          <div class="orr"><span></span> Or <span></span></div>

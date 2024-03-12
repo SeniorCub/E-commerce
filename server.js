@@ -7,6 +7,7 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use("/", express.static(path.join(process.cwd(), "/Public")))
+app.use("*", express.static(path.join(process.cwd(), "/View", "404.html")))
 
 
 const PORT = (process.env.PORT || 9998 );

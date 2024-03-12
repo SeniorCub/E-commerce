@@ -18,3 +18,11 @@ document.querySelectorAll('.recentOrderOptions').forEach((option)=>{
          optionsss.style.display = extended ? "none" : "block";
      })
 })
+let newProdCont =  document.querySelector('#new-prod-cont')
+newProdCont.style.display = 'none';
+let removecomponent = ()=> {
+     newProdCont.style.display = 'none';
+}
+let displayAdd = ()=> {
+     newProdCont.style.display = 'block';
+}

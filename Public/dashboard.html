@@ -150,6 +150,7 @@
                          </div>
                     </div>
                </div>
+
                <!-- Sales Statistics Graph -->
                <div class="salesStatistics">
                     <div class="salesStatisticsTitle">
@@ -245,6 +246,29 @@
                     </div>
                </div>
                
+               <div class="latestOrderss">
+                    <div class="latestHaed">
+                         <div class="latestOrdersTittle">Latest Orders</div>
+                         <div class="seeMore">View All</div>
+                    </div>
+                    <div class="tabbles">
+                         <table class="table">
+                              <thead>
+                                   <tr>
+                                        <th scope="col">Customer Fullname</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Created At</th>
+                                        <th scope="col">User Role</th>
+                                        <th scope="col">Date</th>
+                                        <th scope="col">Options</th>
+                                   </tr>
+                              </thead>
+                              <tbody class="datalist">
+                                   
+                              </tbody>
+                         </table>
+                    </div>
+               </div>
           </div>
           <div class="thirdSide section">
                <div class="profile">
@@ -422,8 +446,47 @@
      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
      <!-- Lottiefiles Js -->
      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+     <!-- Graph Js -->
      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
      <script src="graph.js"></script>
+     <!-- AXIOS JS -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script>
+          let apiUrl = "http://localhost:2020/api/v1/auth/user";
+          let datalist = document.querySelector('.datalist')
+          axios.get(apiUrl)
+          .then((response) => {
+               let data = response.data;
+               data.forEach(data => {
+                    if(data.role === 0){
+                         data.role = "Buyer";
+                    }else if(data.role === 1){
+                         data.role = "Seller";
+                    }else {
+                         data.role = "Admin";
+                    }
+                    datalist.innerHTML +=`
+                    <tr>
+                         <td class="orderedProductName">${data.name}</td>
+                         <td class="">${data.email}</td>
+                         <td class="orderDate">${data.createdAt}</td>
+                         <td class="orderName">${data.role}</td>
+                         <td class="orderAmount">$123.00</td>
+                         <td class="recentOrderOptions">
+                              <i class="bi bi-three-dots"></i>
+                              <div class="optionsss">
+                                   <div class="option"><i class="bi bi-eye"></i> View</div>
+                                   <div class="option"><i class="fa-solid fa-x"></i> Cancel</div>
+                              </div>
+                         </td>
+                    </tr>
+                    `
+               })
+          })
+          .catch((error) => {
+               console.log(error);
+          })
+     </script>
      <!-- Dashboard JS -->
      <script src="dashboard.js"></script>
 </body>

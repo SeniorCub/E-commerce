@@ -46,10 +46,16 @@ export const registerClient = async (req, res) => {
 export const loginClient = async (req, res) => {
      try {
           const{email, password}= req.body;
-          if (!email || !password) {
+          if (!email) {
                return res.status(201).send({
                     success: false,
-                    msg: "Unable to Login, please enter your email and password"
+                    msg: "Unable to Login, please enter your email"
+               })
+          }
+          if (!password) {
+               return res.status(201).send({
+                    success: false,
+                    msg: "Unable to Login, please enter your password"
                })
           }
           const user = await usermodels.findOne({email});

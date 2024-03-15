@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <!-- Icon -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+     <link rel="stylesheet" href="dashboard.css">
+     <title>Document</title>
+     <style>
+          img{
+               width: 100%;
+               height:100%;
+          }
+          .orderName{
+               width: 150px;
+               height: 100px;
+          }
+
+     </style>
+</head>
+<body>
+     
+     <div class="latestOrderss">
+          <div class="latestHaed">
+               <div class="latestOrdersTittle">Newwst Members</div>
+               <div class="seeMore">View All</div>
+          </div>
+          <div class="tabbles">
+               <table class="table">
+                    <thead>
+                         <tr>
+                              <th scope="col">Product Name</th>
+                              <th scope="col">Quantity</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Images</th>
+                              <th scope="col">Date</th>
+                              <th scope="col">Options</th>
+                         </tr>
+                    </thead>
+                    <tbody class="datalist">
+                         
+                    </tbody>
+               </table>
+          </div>
+     </div>
+
+     <!-- AXIOS JS -->
+     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+     <script>
+          let apiUrl = "http://localhost:2020/api/v1/products/allProducts";
+          let datalist = document.querySelector('.datalist')
+          axios.get(apiUrl)
+          .then((response) => {
+               let data = response.data;
+               data.forEach(data => {
+                    datalist.innerHTML +=`
+                    <tr>
+                         <td class="orderedProductName">${data.name}</td>
+                         <td class="">${data.quantity}</td>
+                         <td class="orderDate">${data.description}</td>
+                         <td class="orderName"><img src="${data.image}" width="20px" height="20px"></td>
+                         <td class="orderAmount">$123.00</td>
+                         <td class="recentOrderOptions">
+                              <i class="bi bi-three-dots"></i>
+                              <div class="optionsss">
+                                   <div class="option"><i class="bi bi-eye"></i> View</div>
+                                   <div class="option"><i class="fa-solid fa-x"></i> Cancel</div>
+                              </div>
+                         </td>
+                    </tr>
+                    `
+               })
+          })
+          .catch((error) => {
+               console.log(error);
+          })
+     </script>
+</body>
+</html>

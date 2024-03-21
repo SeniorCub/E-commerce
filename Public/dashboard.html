@@ -9,8 +9,31 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
      <link rel="stylesheet" href="dashboard.css">
      <title>Document</title>
+     <style>
+          .hidden{
+              display: none;
+          }
+          #loader{
+              margin: 0 auto;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 10vh;
+              height: 10vh;
+              background-color: black;
+          }
+      </style>
 </head>
 <body>
+
+     
+    <section id="loader">
+     <div class="spinner-border text-primary">
+         <span class="visually-hidden">Loading...</span>
+     </div>
+ </section>
+
+ <main id="content" class="hidden">
      <!-- NavBar -->
      <nav class="navBar">
           <div class="offCavaBtn">
@@ -359,7 +382,7 @@
           </div>
      </main>
 
-     
+ </main>
       
      
 
@@ -376,43 +399,95 @@
      <script src="graph.js"></script>
      <!-- AXIOS JS -->
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-     <script>
-          let apiUrl = "http://localhost:2020/api/v1/auth/user";
-          let datalist = document.querySelector('.datalist')
-          axios.get(apiUrl)
-          .then((response) => {
-               let data = response.data;
-               data.forEach(data => {
-                    if(data.role === 0){
-                         data.role = "Buyer";
-                    }else if(data.role === 1){
-                         data.role = "Seller";
-                    }else {
-                         data.role = "Admin";
-                    }
-                    datalist.innerHTML +=`
-                    <tr>
-                         <td class="orderedProductName">${data.name}</td>
-                         <td class="">${data.email}</td>
-                         <td class="orderDate">${data.createdAt}</td>
-                         <td class="orderName">${data.role}</td>
-                         <td class="orderAmount">$123.00</td>
-                         <td class="recentOrderOptions">
-                              <i class="bi bi-three-dots"></i>
-                              <div class="optionsss">
-                                   <div class="option"><i class="bi bi-eye"></i> View</div>
-                                   <div class="option"><i class="fa-solid fa-x"></i> Cancel</div>
-                              </div>
-                         </td>
-                    </tr>
-                    `
-               })
-          })
-          .catch((error) => {
-               console.log(error);
-          })
-     </script>
      <!-- Dashboard JS -->
      <script src="dashboard.js"></script>
+     <script>
+          document.addEventListener("DOMContentLoaded", async function() {
+              console.log("hello world");
+              
+              
+              try {
+                  // / Replace 'YOUR_API_ENDPOINT' with the actual endpoint to fetch user data
+                      const apiUrl = 'http://localhost:9090/api/v1/auth/test';
+                      // Replace 'YOUR_TOKEN' with the actual token
+                      const token = localStorage.getItem("token")
+                      console.log(token);
+                      
+  
+                      fetch(apiUrl, {
+                      method: 'GET',
+                      headers: {
+                          'Authorization': `Bearer ${token}`,
+                          'Content-Type': 'application/json'
+                      }
+                      })
+                      .then(response => {
+                      if (!response.ok) {
+                          throw new Error('Network response was not ok');
+                      }
+                      return response.json();
+                      })
+                      .then(data => {
+                      // Handle the fetched user data
+                          console.log(data);
+  
+                          const userName = data.user.username
+                          document.querySelector(".profileName").innerHTML = `${userName}`;
+
+                          const emaiil = data.user.email
+                          document.querySelector(".profileEmail").innerHTML = `${emaiil}`;
+                          
+                          const userRole = data.user.role;
+                          console.log(userRole);
+                          const isAdminDashboard = userRole === 1 && window.location.pathname === '/dashboard.html';
+                          // If user is admin and already on admin dashboard, do nothing
+                          if (isAdminDashboard) return;
+                          // Ternary statement to redirect based on user role
+                          const nextPage = userRole === 1 ? 'dashboard.html' : 'index.html';
+                          // Redirect to the appropriate page
+                          window.location.href = nextPage;
+                      // handleRoleBasedAccess(userRole);
+                      })
+                      .catch(error => {
+                      // Handle errors
+                      console.error('There was a problem with the fetch operation:', error);
+                      });
+                      // const handleRoleBasedAccess = (userRole)=>{
+  
+                      //     if(userRole === 1){
+                      //         window.location.href = '/dashboard.html'
+                      //     }else{
+                      //         window.location.href = '/index.html'
+                      //     }
+                      // }
+                     
+              } catch (error) {
+                  console.log(error.message);
+                  
+              }       
+          });
+      </script>
+  
+      <!-- Lazy Loader -->
+      <script>
+          function delay(milliseconds) {
+              return new Promise((resolve) => setTimeout(resolve, milliseconds));
+          }
+          document.addEventListener('DOMContentLoaded', function(){
+              async function showContent() {
+                  content.classList.remove('hidden');
+                  await delay(1000);
+              }
+  
+              async function initializeWebsite() {
+                  document.getElementById('loader').style.display = 'flex';
+                  await delay(1000);
+                  document.getElementById('loader').style.display = 'none';
+                  await showContent();
+              }
+  
+              window.addEventListener("load", initializeWebsite);
+          })
+      </script>
 </body>
 </html>

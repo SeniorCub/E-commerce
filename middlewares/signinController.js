@@ -1,6 +1,7 @@
 import dotenv, { configDotenv } from 'dotenv';
 import usermodels from "../models/usermodels.js";
 import jwt from 'jsonwebtoken';
+import { use } from 'bcrypt/promises.js';
 
 dotenv.config();
 
@@ -33,7 +34,8 @@ export const isAdmin = async  (req, res, next) => {
                // When Using Postman
                return res.status(201).send({
                     success: true,
-                    msg: 'Authorized User'
+                    msg: 'Authorized User',
+                    user: user
                })
                // When using  HTML
                // next()

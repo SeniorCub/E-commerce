@@ -1,533 +1,537 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-*{
-     margin: 0;
-     padding: 0;
-     box-sizing: border-box;
-     font-family: "Poppins", sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-body{
-     overflow-x: hidden;
-     font-family: monospace;
-     background-color: #454d4a3b;
+body {
+  overflow-x: hidden;
+  font-family: monospace;
+  background-color: #454d4a3b;
 }
-img{
-     width: 100%;
-     height: 100%;
-     object-fit: contain;
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
-a{
-     text-decoration: none;
-     color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
-i{
-     color: #454D4A;
+i {
+  color: #454d4a;
 }
-.navBar{
-     padding: 10px 50px 5px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 16px;
+.navBar {
+  padding: 10px 50px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
-.icons{
-     width: 30px;
-     height: 30px;
-     border-radius: 20%;
-     background-color: #F1F0F0;
-     display: flex!important;
-     justify-content: center;
-     align-items: center;
+.icons {
+  width: 30px;
+  height: 30px;
+  border-radius: 20%;
+  background-color: #f1f0f0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
-.offCavaBtn, .masterCardIcon{
-     display: none!important;
+.offCavaBtn,
+.masterCardIcon {
+  display: none !important;
 }
-main{
-     display: grid;
-     grid-template-columns: 0.5fr 2fr 1fr;
+section {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr;
 }
-main .section{
-     height: max-content;
-     padding-bottom: 20px;
+section .section {
+  height: max-content;
+  padding-bottom: 20px;
 }
-.firstSide{
-     display: grid;
-     grid-template-rows: 2fr 1fr;
-     height: 90vh;
-     overflow: hidden;
-     background-color: #F1F0F0;
+.firstSide {
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  height: 90vh;
+  overflow: hidden;
+  background-color: #f1f0f0;
 }
-.links{
-     display: flex;
-     flex-direction: column;
-     justify-content: space-around;
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
-.link{
-     display: flex;
-     align-items: center;
-     padding: 20px;
-     cursor: pointer;
+.link {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
 }
-.active{
-     background-color: #454D4A;
-     font-weight: 700;
-     border-left: 5px solid #58A0E2;
-     text-shadow: 1px 1px 1px #58A0E2;
+.active {
+  background-color: #454d4a;
+  font-weight: 700;
+  border-left: 5px solid #58a0e2;
+  text-shadow: 1px 1px 1px #58a0e2;
 }
-.active a{
-     color: #fff;
+.active a {
+  color: #fff;
 }
-.link i{
-     color: #58A0E2;
+.link i {
+  color: #58a0e2;
 }
-.customerSupport{
-     border-top: 1px solid #454D4A;
-     display: flex;
-     flex-direction: column;
-     justify-content: left;
-     gap: 20px;
-     padding: 15px;
+.customerSupport {
+  border-top: 1px solid #454d4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  gap: 20px;
+  padding: 15px;
 }
-.customerSupportName{
-     font-size: 15px;
-     font-weight: 600;
+.customerSupportName {
+  font-size: 15px;
+  font-weight: 600;
 }
-.customerSupportText{
-     font-size: 10px;
-     font-weight: 500;
+.customerSupportText {
+  font-size: 10px;
+  font-weight: 500;
 }
-.customerSupportBtn{
-     padding: 10px;
-     background-color: #589fe22e;
-     color: #0058aa;
-     border: none;
-     border-radius: 5px;
-     width: max-content;
-     font-size: 15px;
-     font-weight: 600;
-     cursor: pointer;
+.customerSupportBtn {
+  padding: 10px;
+  background-color: #589fe22e;
+  color: #0058aa;
+  border: none;
+  border-radius: 5px;
+  width: max-content;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
 }
-.customerSupportBtn i{
-     color: #0058aa;
+.customerSupportBtn i {
+  color: #0058aa;
 }
-.secondSide{
-     background-color: #fff;
+.secondSide {
+  background-color: #fff;
 }
-.updatess{
-     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-     background-color: #F1F0F0;
+.updatess {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #f1f0f0;
 }
-.sidde{
-     border-right: 1px solid #454D4A;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
-     align-items: left;
-     padding: 20px;
+.sidde {
+  border-right: 1px solid #454d4a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  padding: 20px;
 }
-.updatess .sidde:last-child{
-     border-right: none;
+.updatess .sidde:last-child {
+  border-right: none;
 }
-.vistorsTitle{
-     display: flex;
-     align-items: center;
-     gap: 10px;
-     font-size: 20px;
-     font-weight: 700;
+.vistorsTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.iconsss i{
-     color: #fff;
+.iconsss i {
+  color: #fff;
 }
-.vistorsTitle .iconsss{
-     background-color: #454D4A;
-     border-radius: 50%;
-     width: 30px;
-     height: 30px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+.vistorsTitle .iconsss {
+  background-color: #454d4a;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.vistorsCount{
-     font-size: 30px;
-     font-weight: 900;
-     color: #000;
+.vistorsCount {
+  font-size: 30px;
+  font-weight: 900;
+  color: #000;
 }
-.vistorsText{
-     display: flex;
-     flex-direction: row;
-     font-size: 10px;
-     font-weight: 600;
-     color: #454D4A;
-     gap: 10px;
+.vistorsText {
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  font-weight: 600;
+  color: #454d4a;
+  gap: 10px;
 }
-.rattess{
-     color: green;
+.rattess {
+  color: green;
 }
-.rattess i{
-     color: green;
+.rattess i {
+  color: green;
 }
-.salesStatistics{
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
-     padding: 20px;
+.salesStatistics {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
-.salesStatisticsTitle{
-     display: flex;
-     align-items: center;
-     justify-content: space-between;
-     gap: 10px;
-     font-size: 20px;
-     font-weight: 700;
+.salesStatisticsTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 700;
 }
-.graphTitle{
-     display: flex;
-     align-items: center;
-     font-size: 15px;
-     font-weight: 400;
-     gap: 25px;
+.graphTitle {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+  gap: 25px;
 }
-.div{
-     display: flex;
-     gap: 5px;
-     align-items: center;
+.div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
-.cir{
-     width: 10px;
-     height: 10px;
-     border-radius: 50%;
-     background-color: #000;
+.cir {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
 }
-.vis{
-     background-color: blueviolet;
+.vis {
+  background-color: blueviolet;
 }
-.sal{
-     background-color: #58A0E2;
+.sal {
+  background-color: #58a0e2;
 }
-.salesStatisticsGraph{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     gap: 10px;
+.salesStatisticsGraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
-.graph{
-     width: 100%;
-     height: 300px;
-     background-color: #F1F0F0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
+.graph {
+  width: 100%;
+  height: 300px;
+  background-color: #f1f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.vistorBar{
-     width: 20px;
-     height: 100px;
-     background-color: blueviolet;
-     display: flex;
-     justify-content: center;
-     align-items: flex-end;
+.vistorBar {
+  width: 20px;
+  height: 100px;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
-.salesbar{
-     width: 100%;
-     background-color: #58A0E2;
-     height: 50%;
+.salesbar {
+  width: 100%;
+  background-color: #58a0e2;
+  height: 50%;
 }
-.latestOrderss{
-     display: flex;
-     flex-direction: column;
-     gap: 15px;
-     padding: 20px;
-     padding-bottom: 0!important;
+.latestOrderss {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+  padding-bottom: 0 !important;
 }
-.latestHaed{
-     font-size: 15px;
-     font-weight: 700;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
+.latestHaed {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-.seeMore{
-     font-size: 10px;
-     font-weight: 600;
-     color: #454D4A;
-     cursor: pointer;
+.seeMore {
+  font-size: 10px;
+  font-weight: 600;
+  color: #454d4a;
+  cursor: pointer;
 }
-.table th{
-     font-size: 15px;
-     font-weight: 700;
-     color: #454D4A;
+.table th {
+  font-size: 15px;
+  font-weight: 700;
+  color: #454d4a;
 }
-.table td{
-     font-size: 10px;
-     font-weight: 900;
-     color: #000;
+.table td {
+  font-size: 10px;
+  font-weight: 900;
+  color: #000;
 }
-.table{
-     width: 100%;
-     border-collapse: collapse;
+.table {
+  width: 100%;
+  border-collapse: collapse;
 }
-.statuss{
-     display: flex;
-     gap: 5px;
-     align-items: center;
+.statuss {
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
-.bluu{
-     background-color: blue;
+.bluu {
+  background-color: blue;
 }
-.gren{
-     background-color: green;
+.gren {
+  background-color: green;
 }
-.redd{
-     background-color: red;
+.redd {
+  background-color: red;
 }
-.orang{
-     background-color: orange;
+.orang {
+  background-color: orange;
 }
-.recentOrderOptions{
-     position: relative;
+.recentOrderOptions {
+  position: relative;
 }
-.optionsss{
-     display: flex;
-     flex-direction: column;
-     position: absolute;
-     right: 0%;
-     bottom: 0;
-     background-color: #F1F0F0;
-     padding: 10px;
-     z-index: 1;
-     border-radius: 20px;
-     display: none;
+.optionsss {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0%;
+  bottom: 0;
+  background-color: #f1f0f0;
+  padding: 10px;
+  z-index: 1;
+  border-radius: 20px;
+  display: none;
 }
-.option{
-     display: flex;
-     gap: 10px;
-     align-items: center;
-     cursor: pointer;
+.option {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
 }
-.thirdSide{
-     display: flex;
-     flex-direction: column;
-     background-color: #acacac;
+.thirdSide {
+  display: flex;
+  flex-direction: column;
+  background-color: #acacac;
 }
-.profile{
-     display: flex;
-     gap: 20px;
-     padding: 20px;
+.profile {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
 }
-.profilePic img{
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
+.profilePic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
-.profilePic{
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     overflow: hidden;
-     border: 1px solid #454D4A;
+.profilePic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #454d4a;
 }
-.profileDetails{
-     display: flex;
-     flex-direction: column;
+.profileDetails {
+  display: flex;
+  flex-direction: column;
 }
-.profileName{
-     font-size: 20px;
-     font-weight: 700;
+.profileName {
+  font-size: 20px;
+  font-weight: 700;
 }
-.profileEmail{
-     font-size: 15px;
-     font-weight: 600;
-     color: #454D4A;
+.profileEmail {
+  font-size: 15px;
+  font-weight: 600;
+  color: #454d4a;
 }
-.cardsss{
-     display: flex;
-     flex-direction: column;
-     gap: 20px;
-     padding: 20px;
+.cardsss {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
 }
-.cardsss .haed{
-     font-size: 20px;
-     font-weight: 700;
+.cardsss .haed {
+  font-size: 20px;
+  font-weight: 700;
 }
-.cards{
-     display: flex;
-     justify-content: center;
-     align-items: center;
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .card {
-     width: 100%!important;
-     border-radius: 15px;
-     padding: 20px;
-     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-     display: flex;
-     height: 200px;
-     flex-direction: column;
-     justify-content: space-between;
-     border: none;
-     position: relative!important;
-     background-image: linear-gradient(to right, #5aa0e24d, #5aa0e24d),url(images/image.png),linear-gradient(to right, #58A0E2, #81C0E7);
-    background-repeat: no-repeat;
-    background-size: cover;
- }
- 
- .cardTop {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     gap: 10px;
- }
- .txt{
-     color: #454D4A;
- }
- .bankName{
-     font-size: 15px;
-     font-weight: 600;
- }
- .accountNumber {
-     font-size: 25px;
-     font-weight: 900;
-     margin: 0 auto;
- }
- 
- .accountName {
-     font-size: 20px;
-     font-weight: 700;
- }
- 
- .masterCardLookalike {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     position: absolute;
-     right: 5%;
-     bottom: 5%;
- } 
- .circle1,
- .circle2 {
-     width: 50px;
-     height: 50px;
-     border-radius: 50%;
-     position: relative;
- }
- 
- .circle1 {
-     background: radial-gradient(#ff0000, hsla(0, 100%, 50%, 0.3));
-     left: -10%;
- }
- 
- .circle2 {
-     background: radial-gradient(#ffff00, rgba(255, 255, 0, 0.3));
- }
- .recentActivities{
-     display: flex;
-     flex-direction: column;
-     gap: 10px;
-     padding: 20px;
- }
-.recentHaed{
-     font-size: 20px;
-     font-weight: 700;
-}
-.activities{
-     display: flex;
-     gap: 10px;
-     flex-direction: column;
-}
-.activity{
-     display: flex;
-     justify-content: space-between;
-     padding: 0 10px;
-     align-items: center;
-     background-color: #F1F0F0;
-     border-radius: 10px;
-     height: 50px;
-     gap: 15px;
-}
-.activityIcon i{
-     color: #0058aa;
-}
-.activityIcon{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     background-color: #81C0E7;
-     border-radius: 5px;
-     width: 30px;
-     height: 30px;
-}
-.activityDetail{
-     display: flex;
-     flex-direction: column;
-     width: 100%;
-}
-.activityBar{
-     background-color: #454d4a5e;
-     border-radius: 10px;
-     width: 100%;
-     height: 15px;
-}
-.barForActivity{
-     background-color: #58A0E2;
-     border-radius: 10px;
-     width: 50%;
-     height: 100%;
-}
-.activityTitle{
-     font-size: 10px;
-     font-weight: 700;
-}
-.barpercentag{
-     color: #454D4A;
-     width: 30px;
-     height: 30px;
+  width: 100% !important;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  position: relative !important;
+  background-image: linear-gradient(to right, #5aa0e24d, #5aa0e24d),
+    url(images/image.png), linear-gradient(to right, #58a0e2, #81c0e7);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media screen and (max-width: 768px){
-     body{
-          overflow-x: hidden!important;
-     }
-     .navBar{
-          padding: 0 10px!important;
-          justify-content: left;
-          margin-left: 0!important;
-     }
-     nav form{
-          display: none;
-     }
-     .offCavaBtn, .masterCardIcon{
-          display: flex!important;
-     }
-     .navBar{
-          padding: 10px 20px 5px;
-          justify-content: space-between;
-     }
-     main{
-          width: 100vw;
-          display: flex;
-          flex-direction: column;
-     }
-     main .section{
-          max-height: 100%;
-          overflow-x: hidden;
-     }
-     .firstSide, .thirdSide{
-          display: none;
-          position: absolute;
-          width: 50%;
-          height: 90vh;
-     }
-     .thirdSide{
-          right: 0;
-          width: 100vw;
-          overflow-x: hidden;
-     }
-     .updatess{
-         overflow-x: scroll;
-     }
-     .latestOrderss{
-          overflow-x: auto;
-     }
-     .tables{
-          overflow-x: scroll;
-     }
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.txt {
+  color: #454d4a;
+}
+.bankName {
+  font-size: 15px;
+  font-weight: 600;
+}
+.accountNumber {
+  font-size: 25px;
+  font-weight: 900;
+  margin: 0 auto;
+}
+
+.accountName {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.masterCardLookalike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+}
+.circle1,
+.circle2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.circle1 {
+  background: radial-gradient(#ff0000, hsla(0, 100%, 50%, 0.3));
+  left: -10%;
+}
+
+.circle2 {
+  background: radial-gradient(#ffff00, rgba(255, 255, 0, 0.3));
+}
+.recentActivities {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+.recentHaed {
+  font-size: 20px;
+  font-weight: 700;
+}
+.activities {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+.activity {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  align-items: center;
+  background-color: #f1f0f0;
+  border-radius: 10px;
+  height: 50px;
+  gap: 15px;
+}
+.activityIcon i {
+  color: #0058aa;
+}
+.activityIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #81c0e7;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+.activityDetail {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.activityBar {
+  background-color: #454d4a5e;
+  border-radius: 10px;
+  width: 100%;
+  height: 15px;
+}
+.barForActivity {
+  background-color: #58a0e2;
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+}
+.activityTitle {
+  font-size: 10px;
+  font-weight: 700;
+}
+.barpercentag {
+  color: #454d4a;
+  width: 30px;
+  height: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  .navBar {
+    padding: 0 10px !important;
+    justify-content: left;
+    margin-left: 0 !important;
+  }
+  nav form {
+    display: none;
+  }
+  .offCavaBtn,
+  .masterCardIcon {
+    display: flex !important;
+  }
+  .navBar {
+    padding: 10px 20px 5px;
+    justify-content: space-between;
+  }
+  section {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+  }
+  section .section {
+    max-height: 100%;
+    overflow-x: hidden;
+  }
+  .firstSide,
+  .thirdSide {
+    display: none;
+    position: absolute;
+    width: 50%;
+    height: 90vh;
+  }
+  .thirdSide {
+    right: 0;
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .updatess {
+    overflow-x: scroll;
+  }
+  .latestOrderss {
+    overflow-x: auto;
+  }
+  .tables {
+    overflow-x: scroll;
+  }
 }

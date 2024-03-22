@@ -68,7 +68,7 @@
           </a>             
      </nav>
 
-     <main>
+     <section>
           <div class="firstSide section">
                <div class="links">
                     <div class="active link">
@@ -380,7 +380,7 @@
                     </div>
                </div>
           </div>
-     </main>
+     </section>
 
  </main>
       
@@ -408,7 +408,7 @@
               
               try {
                   // / Replace 'YOUR_API_ENDPOINT' with the actual endpoint to fetch user data
-                      const apiUrl = 'http://localhost:9090/api/v1/auth/test';
+                      const apiUrl = 'http://localhost:2020/api/v1/auth/user';
                       // Replace 'YOUR_TOKEN' with the actual token
                       const token = localStorage.getItem("token")
                       console.log(token);
@@ -431,7 +431,7 @@
                       // Handle the fetched user data
                           console.log(data);
   
-                          const userName = data.user.username
+                          const userName = data.user.name
                           document.querySelector(".profileName").innerHTML = `${userName}`;
 
                           const emaiil = data.user.email
@@ -451,16 +451,7 @@
                       .catch(error => {
                       // Handle errors
                       console.error('There was a problem with the fetch operation:', error);
-                      });
-                      // const handleRoleBasedAccess = (userRole)=>{
-  
-                      //     if(userRole === 1){
-                      //         window.location.href = '/dashboard.html'
-                      //     }else{
-                      //         window.location.href = '/index.html'
-                      //     }
-                      // }
-                     
+                      });                
               } catch (error) {
                   console.log(error.message);
                   

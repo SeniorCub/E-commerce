@@ -430,7 +430,7 @@
                       .then(data => {
                       // Handle the fetched user data
                           console.log(data);
-  
+                         
                           const userName = data.user.name
                           document.querySelector(".profileName").innerHTML = `${userName}`;
 
@@ -443,7 +443,7 @@
                           // If user is admin and already on admin dashboard, do nothing
                           if (isAdminDashboard) return;
                           // Ternary statement to redirect based on user role
-                          const nextPage = userRole === 1 ? 'dashboard.html' : 'index.html';
+                          const nextPage = userRole === 1 ? './dashboard.html' : './index.html';
                           // Redirect to the appropriate page
                           window.location.href = nextPage;
                       // handleRoleBasedAccess(userRole);

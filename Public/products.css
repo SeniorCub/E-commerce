@@ -134,6 +134,11 @@ i{
      top: 0%;
      left: 10%;
      padding: 10px;
+     z-index: 100000;
+     display: none;
+}
+.listcard::-webkit-scrollbar{
+     display: none;
 }
 .cold{
      position: relative;
@@ -190,7 +195,7 @@ i{
 }
 .listcard li{
      display: grid;
-     grid-template-columns: 100px repeat(3, 1fr);
+     grid-template-columns: 120px repeat(3, 1fr);
      row-gap: 10px;
      margin-bottom: 20px;
 }
@@ -200,7 +205,7 @@ i{
      align-items: center;
 }
 .listcard li img{
-     width: 50px;
+     width: 100%;
 }
 .listcard button{
      width: auto;
@@ -244,7 +249,6 @@ i{
      color: #58A0E2;
    }
    .btn-primary {
-     /* border: none!important; */
      background-color: #58A0E2;
    }
    .btn-primary:hover {
@@ -335,5 +339,20 @@ i{
      }
      .category-container{
           grid-template-columns: repeat(2, 1fr)!important;
+     }
+     .cold{
+          display: block;
+     }
+     .col3 {
+          margin: 0 auto;
+          margin-top: 20px;
+          width: 80%;
+          position: initial;
+     }
+     .nss{
+          flex-direction: column;
+     }
+     .listcard li {
+          grid-template-columns: repeat(3,1fr);
      }
 }

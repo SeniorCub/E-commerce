@@ -27,7 +27,6 @@
 
           .in-new-prod-cont {
                width: 100%;
-               height: 5%;
                display: flex;
                justify-content: center;
                align-items: center;
@@ -46,7 +45,7 @@
           .forms div {
                width: 100%;
                display: flex;
-               justify-content: space-between;
+               gap: 30px;
                align-items: center;
                margin: 10px 0;
           }
@@ -91,7 +90,7 @@
                     <input type="number" id="productQuantity" name="quantity" required>
                </div>
                <div>
-                    <label for="productDescription">Product Description</label>
+                    <label for="productDesc">Product Description</label>
                     <textarea name="description" id="productDescription" cols="30" rows="10"></textarea>
                </div>
                <div>
@@ -100,7 +99,15 @@
                </div>
                <div>
                     <label for="productCategory">Product Category</label>
-                    <input type="text" id="productCategory" name="category" required>
+                    <select name="category" id="productCategory" required>
+                         <option value="Laptop">Laptop</option>
+                         <option value="Camera">Camera</option>
+                         <option value="Accessories">Accessories</option>
+                         <option value="Tv">Tv</option>
+                         <option value="Headphones">Headphones</option>
+                         <option value="Storage">Storage</option>
+                         <option value="Home Theater">Home Theater</option>
+                    </select>
                </div>
                <div>
                     <label for="productImage">Product Image</label>

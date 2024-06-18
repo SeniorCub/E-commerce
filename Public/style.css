@@ -6,7 +6,8 @@
      font-family: "Poppins", sans-serif;
 }
 body{
-     overflow-x: hidden;
+     width: 100vw;
+     overflow-x: hidden!important;
      font-family: monospace;
      background-color: #454d4a3b;
 }
@@ -268,7 +269,6 @@ i{
      font-size: inherit;
      font-family: inherit;
 }
-
 .hero a.learn-more {
      width: 12rem;
      height: auto;
@@ -419,6 +419,8 @@ section{
      border-radius: 10px;
 }
 .upo img{
+     width: 100%!important;
+     height: 100%!important;
      object-fit: contain!important;
 }
 .upo .text{
@@ -1004,11 +1006,56 @@ hr{
      font-weight: 400;
      line-height: normal;
 }
+.cards{
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+}
 @media screen and (max-width: 768px){
      .col-12{
           width: 100%;
      }
      .bigTwo{
           height: 305px;
+     }
+     .cardss {
+          justify-content: center;
+          margin-bottom: 30px;
+          max-height: max-content;
+          flex-wrap: wrap;
+     }
+     .categories {
+          flex-wrap: wrap;
+          gap: 20px;
+          margin: 20px 0;
+     }
+     swiper-slide {
+          display: block;
+     }
+     .otherPages {
+          display: flex;
+          flex-direction: row;
+          gap: 10px;
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+     .hero .col-lg-6{
+          text-align: center;
+     }
+     .cards{
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+@media screen and (max-width: 458px){
+     .cards{
+          grid-template-columns: repeat(1, 1fr);
+     }
+     .secondSection{
+          display: flex;
+          flex-direction: column-reverse;
+          align-items: center;
+          gap: 20px;
+     }
+     .rightSec, .leftSec {
+          width: 90vw;
      }
 }

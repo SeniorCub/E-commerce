@@ -5,6 +5,9 @@ document.querySelector(".car").addEventListener("click", () => {
     let extended = cartmenu.style.display === "block";
     cartmenu.style.display = extended ? "none" : "block";
 });
+document.querySelector(".close").addEventListener("click", () => {
+document.querySelector(".carts").style.display = "none";
+});
 
 let list = document.querySelector(".list");
 let listCard = document.querySelector(".listcard");
@@ -171,12 +174,14 @@ function reloadCard() {
             newDiv.innerHTML = `
                 <div><img src="${product.image}" alt="" width=""></div>
                 <div>${product.name}</div>
-                <div>$${(product.price * value.quantity).toLocaleString()}</div>
-                <div>
+               <div class="nss">
+                    <div>$${(product.price * value.quantity).toLocaleString()}</div>
+                    <div>
                     <button onclick="changeQuantity(${index}, ${value.quantity - 1})">-</button>
                     <div class="count">${value.quantity}</div>
                     <button onclick="changeQuantity(${index}, ${value.quantity + 1})">+</button>
-                </div>
+                    </div>
+               </div>
             `;
             cartItemContainer.appendChild(newDiv);
 

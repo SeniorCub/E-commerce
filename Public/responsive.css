@@ -1,0 +1,26 @@
+@media (max-width:768px) {
+     body{
+          width: 100vw;
+          overflow-x: hidden!important;
+     }
+     .navBar{
+          padding: 5px!important;
+          justify-content: space-around;
+          align-items: center;
+          img{
+               width: 50px;
+          }
+          form{
+               display: none;
+          }
+          width: 100vw!important;
+     }
+     section{
+          padding: 0 10px;
+     }
+     .hero{
+          display: flex;
+          flex-direction: column-reverse;
+          padding: 0;
+     }
+}

@@ -23,8 +23,7 @@ app.use("/uploads", express.static(path.join(process.cwd(), "/uploads")))
 // Middleware for handling 404 errors
 app.use((req, res, next) => {
      res.status(404).sendFile(path.join(process.cwd(), "/View/404.html"));
-   });
-
+});
 
 app.use('/api/v1/auth', authroute);
 app.use('/api/v1/products', productroute);

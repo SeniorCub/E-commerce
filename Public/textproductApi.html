@@ -50,11 +50,12 @@
      <!-- AXIOS JS -->
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <script>
-          let apiUrl = "http://localhost:2020/api/v1/products/allProducts";
+          let apiUrl = "/api/v1/products/allProducts";
           let datalist = document.querySelector('.datalist')
           axios.get(apiUrl)
           .then((response) => {
                let data = response.data;
+               console.log(data)
                data.forEach(data => {
                     datalist.innerHTML +=`
                     <tr>

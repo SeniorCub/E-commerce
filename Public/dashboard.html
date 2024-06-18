@@ -84,7 +84,7 @@
                          </a>
                    </div>
                    <div class="link">
-                         <a href="calculator.html">
+                         <a class="calculatorHtml">
                               <i class="bi bi-calculator"></i>
                               <span>Calculator</span>
                          </a>
@@ -382,6 +382,36 @@
           </div>
      </section>
 
+     <section class="calculator dna">
+          <div class="head d-flex justify-content-between align-items-center">
+               <div class="title">Calculator</div>
+               <div class="close">
+                    <i class="fa-solid fa-x"></i>
+               </div>
+          </div>
+          <div class="calculatorBody dna">
+               <input type="text" class="inputs">
+               <div class="btnss">
+                    <button class="btn1">1</button>
+                    <button class="btn2">2</button>
+                    <button class="btn3">3</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button class="btn4">4</button>
+                    <button class="btn5">5</button>
+                    <button class="btn6">6</button>
+                    <button class="btnm">-</button>
+                    <button class="btn7">7</button>
+                    <button class="btn8">8</button>
+                    <button class="btn9">9</button>
+                    <button class="btnp">+</button>
+                    <button class="btnMul">*</button>
+                    <button class="btn0">0</button>
+                    <button class="btnd">/</button>
+                    <button onclick="calculate()">=</button>
+               </div>
+               <button class="lolo" onclick="deleteLastCharacter()">DEL</button>
+          </div>
+     </section>
  </main>
       
      
@@ -400,65 +430,60 @@
      <!-- AXIOS JS -->
      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
      <!-- Dashboard JS -->
+     <script src="cal.js"></script>
      <script src="dashboard.js"></script>
      <script>
           document.addEventListener("DOMContentLoaded", async function() {
               console.log("hello world");
-              
-              
+          
               try {
-                  // / Replace 'YOUR_API_ENDPOINT' with the actual endpoint to fetch user data
-                      const apiUrl = '/api/v1/auth/user';
-                      // Replace 'YOUR_TOKEN' with the actual token
-                      const token = localStorage.getItem("token")
-                      console.log(token);
-                      
-  
+                  const apiUrl = '/api/v1/auth/user';
+                  const token = localStorage.getItem("token");
+                  console.log("Retrieved Token: ", token);
+          
+                  if (!token || token.split('.').length !== 3) {
+                      console.error("Invalid Token Format");
+                      // Handle invalid token (e.g., redirect to login page)
+                  } else {
                       fetch(apiUrl, {
-                      method: 'GET',
-                      headers: {
-                          'Authorization': `Bearer ${token}`,
-                          'Content-Type': 'application/json'
-                      }
+                          method: 'GET',
+                          headers: {
+                              'Authorization': `Bearer ${token}`,
+                              'Content-Type': 'application/json'
+                          }
                       })
                       .then(response => {
-                      if (!response.ok) {
-                          throw new Error('Network response was not ok');
-                      }
-                      return response.json();
+                          if (!response.ok) {
+                              throw new Error('Network response was not ok');
+                          }
+                          return response.json();
                       })
                       .then(data => {
-                      // Handle the fetched user data
                           console.log(data);
-  
-                          const userName = data.user.name
+                          // Handle the fetched user data
+                          const userName = data.user.name;
                           document.querySelector(".profileName").innerHTML = `${userName}`;
-
-                          const emaiil = data.user.email
-                          document.querySelector(".profileEmail").innerHTML = `${emaiil}`;
-                          
+          
+                          const email = data.user.email;
+                          document.querySelector(".profileEmail").innerHTML = `${email}`;
+          
                           const userRole = data.user.role;
                           console.log(userRole);
                           const isAdminDashboard = userRole === 1 && window.location.pathname === '/dashboard.html';
-                          // If user is admin and already on admin dashboard, do nothing
                           if (isAdminDashboard) return;
-                          // Ternary statement to redirect based on user role
                           const nextPage = userRole === 1 ? 'dashboard.html' : 'products.html';
-                          // Redirect to the appropriate page
                           window.location.href = nextPage;
-                      // handleRoleBasedAccess(userRole);
                       })
                       .catch(error => {
-                      // Handle errors
-                      console.error('There was a problem with the fetch operation:', error);
-                      });                
+                          console.error('Fetch error:', error);
+                      });
+                  }
               } catch (error) {
                   console.log(error.message);
-                  
               }       
           });
-      </script>
-  
+     </script>
+          
       <!-- Lazy Loader -->
       <script>
           function delay(milliseconds) {

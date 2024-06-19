@@ -158,14 +158,12 @@ function reloadCard() {
             newDiv.innerHTML = `
                 <div><img src="${product.image}" alt="" width=""></div>
                 <div>${product.name}</div>
-                <div class="nss">
-                    <div>$${(parseFloat(product.price) * value.quantity).toLocaleString()}</div>
-                    <div>
-                        <button onclick="changeQuantity(${index}, ${value.quantity - 1})">-</button>
-                        <div class="count">${value.quantity}</div>
-                        <button onclick="changeQuantity(${index}, ${value.quantity + 1})">+</button>
-                    </div>
-                </div>
+               <div>$${(product.price).toLocaleString()}</div>
+               <div>
+                    <button onclick="changeQuantity(${index}, ${value.quantity - 1})">-</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick="changeQuantity(${index}, ${value.quantity + 1})">+</button>
+               </div>
             `;
             cartItemContainer.appendChild(newDiv);
 

@@ -77,7 +77,6 @@ i{
 
 .categories{
      display: flex;
-     justify-content: center;
      align-items: center;
      justify-content: space-around;
 }
@@ -135,9 +134,6 @@ i{
      left: 10%;
      padding: 10px;
      z-index: 100000;
-     display: none;
-}
-.listcard::-webkit-scrollbar{
      display: none;
 }
 .cold{

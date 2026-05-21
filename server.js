@@ -1,12 +1,9 @@
 import express from 'express';
 import path from 'path';
-import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
 import connectDB from './dB/connect.js';
-import color from 'colors';
+import 'colors';
 import morgan from 'morgan';
-import usermodels from './models/usermodels.js';
-import productmodels from './models/productmodels.js';
 import authroute from './routes/authroute.js';
 import productroute from './routes/productroute.js';
 const app = express();

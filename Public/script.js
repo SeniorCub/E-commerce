@@ -177,7 +177,7 @@ function initApp() {
             </div>
             <div class="bon card-title d-flex">
                 <div class="btn btn-pri percent">${value.rating.rate}</div>
-                <div class="btn btn-pri love""><i class="fa-regular fa-heart" style="color: #e94c2a;"></i></div>
+                <div class="btn btn-pri love"><i class="${heartIconStyle} fa-heart" style="color: #e94c2a;"></i></div>
             </div>
             <div class="price">$${value.price.toLocaleString()}</div>
             <button class="addCart" onclick="addToCart(event, ${key})">Add To Cart</button>
@@ -236,11 +236,11 @@ function reloadCard() {
 
 function changeQuantity(key, quantity) {
     if (quantity == 0) {
-        delete listCards[key];
+        listCards.splice(key, 1);
     } else {
         listCards[key].quantity = quantity;
     }
-    reloadCard();ggs
+    reloadCard();
 }
 
 let toogler = document.querySelectorAll(".love");

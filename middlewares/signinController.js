@@ -1,7 +1,6 @@
-import dotenv, { configDotenv } from 'dotenv';
+import dotenv from 'dotenv';
 import usermodels from "../models/usermodels.js";
 import jwt from 'jsonwebtoken';
-import { use } from 'bcrypt/promises.js';
 
 dotenv.config();
 
@@ -13,7 +12,10 @@ export const signinController = async (req, res, next) => {
           req.user = decode
           next()
      } catch (error) {
-          console.log(error);
+          return res.status(401).send({
+               success: false,
+               msg: "Invalid or missing token"
+          })
      }
 }
 
@@ -31,16 +33,16 @@ export const isAdmin = async  (req, res, next) => {
                     }
                 })
           } else {
-               // When Using Postman
                return res.status(201).send({
                     success: true,
                     msg: 'Authorized User',
                     user: user
                })
-               // When using  HTML
-               // next()
           }
      } catch (error) {
-          console.log(error);
+          return res.status(500).send({
+               success: false,
+               msg: error.message
+          })
      }
 }

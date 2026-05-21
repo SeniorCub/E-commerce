@@ -288,7 +288,6 @@ section .section {
   position: relative;
 }
 .optionsss {
-  display: flex;
   flex-direction: column;
   position: absolute;
   right: 0%;
@@ -567,7 +566,7 @@ section .section {
   }
   .navBar {
     padding: 0 10px !important;
-    justify-content: left;
+    justify-content: space-between;
     margin-left: 0 !important;
   }
   nav form {
@@ -576,10 +575,6 @@ section .section {
   .offCavaBtn,
   .masterCardIcon {
     display: flex !important;
-  }
-  .navBar {
-    padding: 10px 20px 5px;
-    justify-content: space-between;
   }
   section {
     width: 100vw;

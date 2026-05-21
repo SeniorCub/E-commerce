@@ -20,11 +20,11 @@ let categoriesContainer = document.querySelector(".categories");
 let searchInput = document.querySelector(".form-control");
 let detailsSection = document.querySelector(".details");
 
-var clickedCategoryName = '';
-var fetchedData; // Store fetched data globally
-var currentCategory; // Store the current category globally
+let clickedCategoryName = '';
+let fetchedData; // Store fetched data globally
+let currentCategory; // Store the current category globally
 let totalProductsCount = 0;
-var listCards = [];
+let listCards = [];
 
 document.addEventListener('DOMContentLoaded', function () {
     fetchDataFromAPI('Laptop');
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function fetchDataFromAPI(categoryName) {
-    var apiUrl = '/api/v1/products/allProducts';
+    const apiUrl = '/api/v1/products/allProducts';
 
     fetch(apiUrl)
         .then(response => response.json())
@@ -104,7 +104,7 @@ function displayCategories(categories) {
         categoryDiv.innerHTML = `
             <div class="text">${category}</div>
             <div class="tooltip">
-                <img src="images/${category.toLowerCase()}.png" alt="Tooltip Image">
+                <img src="images/${category.toLowerCase()}.png" alt="Category icon">
             </div>
         `;
         categoryDiv.addEventListener('click', function () {
@@ -201,7 +201,7 @@ function showProductDetails(product) {
         </div>
         <div class="row">
             <div class="img col-6">
-                <img src="${product.image}" alt="Product Image">
+                <img src="${product.image}" alt="Product">
             </div>
             <div class="detailText col-6">
                 <div class="d-flex justify-content-between">

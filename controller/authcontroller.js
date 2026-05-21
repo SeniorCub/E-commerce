@@ -1,4 +1,3 @@
-import { use } from "bcrypt/promises.js";
 import { passwordHash , passwordCompare} from "../helper/authhelper.js";
 import usermodels from "../models/usermodels.js";
 import jwt from "jsonwebtoken";

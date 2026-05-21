@@ -1,4 +1,5 @@
 const ctx = document.getElementById('myChart');
+let chart;
 
 // Fetch data from the local JSON file
 fetch('graph.json')
@@ -11,7 +12,10 @@ fetch('graph.json')
 
 // Function to update the chart with new data
 function updateChart(ctx, newData) {
-  new Chart(ctx, {
+  if (chart) {
+    chart.destroy();
+  }
+  chart = new Chart(ctx, {
     type: 'bar',
     data: {
       labels: newData.labels,
